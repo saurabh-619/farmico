@@ -1,0 +1,4 @@
+.vscode
+models/deploy/venv/
+models/deploy/app/__pycache__/
+models/deploy/app/assets/weed_detection/crop_weed_detection.weights

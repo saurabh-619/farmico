@@ -1,0 +1,3 @@
+[submodule "models/deploy"]
+	path = models/deploy
+	url = https://github.com/saurabh-619/farmico.git
