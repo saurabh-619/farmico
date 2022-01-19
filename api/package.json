@@ -5,6 +5,7 @@
   "license": "MIT", 
   "scripts": {
     "start":"node src/index.js",
+    "generate:keys":"node src/helpers/generateKeys.js",
     "dev":"nodemon src/index.js"
   },
   "dependencies": {
