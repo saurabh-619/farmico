@@ -1,5 +1,28 @@
-GET http://localhost:3000/
-
+GET http://localhost:8000/
 
 ### 
-GET http://localhost:3000/
+GET http://localhost:8000/
+
+### 
+GET http://localhost:8000/team 
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVhZDE3Mzk2NWY3Y2I4NDRkZDRiMjgiLCJpYXQiOjE2NDI4NDI3ODcsImV4cCI6MTY0Mjg0MjgxMiwiYXVkIjoiNjFlYWQxNzM5NjVmN2NiODQ0ZGQ0YjI4IiwiaXNzIjoiZmFybWljby52ZXJjZWwuY29tIn0.ZWyQ85av45BSt_28k4zqLjZZjRMg4PFSCcocOJbraO0; Max-Age=25; Domain=127.0.0.1; Path=/; Expires=Sat, 22 Jan 2022 09:13:32 GMT; HttpOnly; Secure
+Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVhZDE3Mzk2NWY3Y2I4NDRkZDRiMjgiLCJpYXQiOjE2NDI4NDMxMDcsImV4cCI6MTY0Mjg0NDAwNywiYXVkIjoiNjFlYWQxNzM5NjVmN2NiODQ0ZGQ0YjI4IiwiaXNzIjoiZmFybWljby52ZXJjZWwuY29tIn0.vr14leE9jyux0-LmLU4e11eHRUYL9Lg7mViw7kdvRKI; Max-Age=900; Domain=127.0.0.1; Path=/; Expires=Sat, 22 Jan 2022 09:33:27 GMT; HttpOnly; Secure
+
+###
+POST http://localhost:8000/auth/login
+Content-Type: application/json
+
+{
+	"email":"saurabh@gmail.com",
+	"password":"123456"
+}
+
+###
+POST http://localhost:8000/auth/refresh-token 
+Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVhZDE3Mzk2NWY3Y2I4NDRkZDRiMjgiLCJpYXQiOjE2NDI4NDMxMDcsImV4cCI6MTY0Mjg0NDAwNywiYXVkIjoiNjFlYWQxNzM5NjVmN2NiODQ0ZGQ0YjI4IiwiaXNzIjoiZmFybWljby52ZXJjZWwuY29tIn0.vr14leE9jyux0-LmLU4e11eHRUYL9Lg7mViw7kdvRKI; Max-Age=900; Domain=127.0.0.1; Path=/; Expires=Sat, 22 Jan 2022 09:33:27 GMT; HttpOnly; Secure
+
+###
+DELETE http://localhost:8000/auth/logout 
+Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVhZDE3Mzk2NWY3Y2I4NDRkZDRiMjgiLCJpYXQiOjE2NDI4NDMxMDcsImV4cCI6MTY0Mjg0NDAwNywiYXVkIjoiNjFlYWQxNzM5NjVmN2NiODQ0ZGQ0YjI4IiwiaXNzIjoiZmFybWljby52ZXJjZWwuY29tIn0.vr14leE9jyux0-LmLU4e11eHRUYL9Lg7mViw7kdvRKI; Max-Age=900; Domain=127.0.0.1; Path=/; Expires=Sat, 22 Jan 2022 09:33:27 GMT; HttpOnly; Secure
+
+

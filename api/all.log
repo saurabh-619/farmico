@@ -123,3 +123,466 @@
 [info]: Server running on port 3000🚀  =======>  2022-01-19T20:25:57.482Z) --- 1:55:57 am Thu Jan 20 2022
 [info]: Server running on port 3000🚀  =======>  2022-01-19T20:26:00.850Z) --- 1:56:00 am Thu Jan 20 2022
 [info]: Server running on port 3000🚀  =======>  2022-01-19T20:26:02.234Z) --- 1:56:02 am Thu Jan 20 2022
+[info]: Server running on port 3000🚀  =======>  2022-01-19T20:26:04.461Z) --- 1:56:04 am Thu Jan 20 2022
+[info]: Server running on port 3000🚀  =======>  2022-01-20T19:31:41.769Z) --- 1:01:41 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:34:19.654Z) --- 1:04:19 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:37:09.705Z) --- 1:07:09 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:38:33.972Z) --- 1:08:33 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:38:37.320Z) --- 1:08:37 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:38:38.955Z) --- 1:08:38 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:38:59.681Z) --- 1:08:59 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:39:38.183Z) --- 1:09:38 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:41:20.660Z) --- 1:11:20 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:42:02.150Z) --- 1:12:02 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:44:53.125Z) --- 1:14:53 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:45:15.276Z) --- 1:15:15 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:45:30.772Z) --- 1:15:30 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:45:51.668Z) --- 1:15:51 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:46:04.959Z) --- 1:16:04 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:46:15.141Z) --- 1:16:15 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:46:27.850Z) --- 1:16:27 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:46:38.088Z) --- 1:16:38 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:50:37.819Z) --- 1:20:37 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:51:04.508Z) --- 1:21:04 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:51:28.537Z) --- 1:21:28 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:51:40.533Z) --- 1:21:40 am Fri Jan 21 2022
+[error]: Requested route does not exit.  =======>  2022-01-20T19:51:44.610Z) --- 1:21:44 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:52:04.967Z) --- 1:22:04 am Fri Jan 21 2022
+[error]: Requested route does not exit.  =======>  2022-01-20T19:52:22.033Z) --- 1:22:22 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:53:55.427Z) --- 1:23:55 am Fri Jan 21 2022
+[error]: Cannot destructure property 'name' of '(intermediate value)' as it is undefined.  =======>  2022-01-20T19:53:58.491Z) --- 1:23:58 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:54:20.738Z) --- 1:24:20 am Fri Jan 21 2022
+[error]: "name" is required  =======>  2022-01-20T19:54:23.069Z) --- 1:24:23 am Fri Jan 21 2022
+[error]: "username" is required  =======>  2022-01-20T19:54:54.440Z) --- 1:24:54 am Fri Jan 21 2022
+[error]: "email" is required  =======>  2022-01-20T19:55:03.621Z) --- 1:25:03 am Fri Jan 21 2022
+[error]: "password" is required  =======>  2022-01-20T19:55:26.461Z) --- 1:25:26 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T19:57:06.022Z) --- 1:27:06 am Fri Jan 21 2022
+[error]: "password" length must be at least 6 characters long  =======>  2022-01-20T19:57:08.418Z) --- 1:27:08 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:07:35.589Z) --- 1:37:35 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:07:38.667Z) --- 1:37:38 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:07:44.199Z) --- 1:37:44 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:12:07.760Z) --- 1:42:07 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:12:27.370Z) --- 1:42:27 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:12:31.544Z) --- 1:42:31 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:12:39.761Z) --- 1:42:39 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:12:44.325Z) --- 1:42:44 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:12:50.029Z) --- 1:42:50 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:13:16.810Z) --- 1:43:16 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:13:40.803Z) --- 1:43:40 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:13:43.603Z) --- 1:43:43 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:13:59.534Z) --- 1:43:59 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:14:06.680Z) --- 1:44:06 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:14:51.715Z) --- 1:44:51 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:15:18.520Z) --- 1:45:18 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:15:27.756Z) --- 1:45:27 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:16:40.740Z) --- 1:46:40 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:16:43.498Z) --- 1:46:43 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:16:46.500Z) --- 1:46:46 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:17:00.424Z) --- 1:47:00 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:17:15.958Z) --- 1:47:15 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:17:16.877Z) --- 1:47:16 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:17:23.576Z) --- 1:47:23 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:17:59.935Z) --- 1:47:59 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:18:06.421Z) --- 1:48:06 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:18:33.137Z) --- 1:48:33 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:19:01.503Z) --- 1:49:01 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:19:37.403Z) --- 1:49:37 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:19:54.075Z) --- 1:49:54 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:20:04.754Z) --- 1:50:04 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:20:10.782Z) --- 1:50:10 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:20:18.032Z) --- 1:50:18 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:20:31.203Z) --- 1:50:31 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:21:49.867Z) --- 1:51:49 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:21:53.499Z) --- 1:51:53 am Fri Jan 21 2022
+[error]: Cannot read properties of undefined (reading 'findOne')  =======>  2022-01-20T20:22:06.339Z) --- 1:52:06 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:22:23.455Z) --- 1:52:23 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:22:29.800Z) --- 1:52:29 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:22:51.024Z) --- 1:52:51 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:23:02.783Z) --- 1:53:02 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:23:03.464Z) --- 1:53:03 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:23:04.287Z) --- 1:53:04 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:23:10.014Z) --- 1:53:10 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:23:14.064Z) --- 1:53:14 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-20T20:23:20.518Z) --- 1:53:20 am Fri Jan 21 2022
+[error]: Email already exists. Please use with another  =======>  2022-01-20T20:23:31.130Z) --- 1:53:31 am Fri Jan 21 2022
+[error]: Username already taken. Please try another one.  =======>  2022-01-20T20:23:36.336Z) --- 1:53:36 am Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T07:59:28.629Z) --- 1:29:28 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:00:31.098Z) --- 1:30:31 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:00:49.040Z) --- 1:30:49 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:00:56.699Z) --- 1:30:56 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:01:12.020Z) --- 1:31:12 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:01:17.719Z) --- 1:31:17 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:01:22.852Z) --- 1:31:22 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:02:46.080Z) --- 1:32:46 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:02:50.649Z) --- 1:32:50 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:04:10.350Z) --- 1:34:10 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:04:19.323Z) --- 1:34:19 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:04:49.365Z) --- 1:34:49 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:05:35.950Z) --- 1:35:35 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:06:08.949Z) --- 1:36:08 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:07:05.722Z) --- 1:37:05 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:07:17.826Z) --- 1:37:17 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:09:55.492Z) --- 1:39:55 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:10:11.536Z) --- 1:40:11 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:10:23.752Z) --- 1:40:23 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:10:48.238Z) --- 1:40:48 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:11:03.228Z) --- 1:41:03 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:12:23.427Z) --- 1:42:23 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:12:30.837Z) --- 1:42:30 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:12:39.718Z) --- 1:42:39 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:13:19.764Z) --- 1:43:19 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:13:54.105Z) --- 1:43:54 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:14:10.205Z) --- 1:44:10 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:14:16.988Z) --- 1:44:16 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:14:29.114Z) --- 1:44:29 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:16:40.922Z) --- 1:46:40 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:17:19.266Z) --- 1:47:19 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:17:53.082Z) --- 1:47:53 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:17:54.867Z) --- 1:47:54 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:18:01.242Z) --- 1:48:01 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:18:54.587Z) --- 1:48:54 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:19:15.969Z) --- 1:49:15 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:19:28.644Z) --- 1:49:28 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:26:58.341Z) --- 1:56:58 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:27:26.827Z) --- 1:57:26 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:35:20.613Z) --- 2:05:20 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:46:52.710Z) --- 2:16:52 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:48:56.188Z) --- 2:18:56 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:49:30.811Z) --- 2:19:30 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:51:56.688Z) --- 2:21:56 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T08:54:14.513Z) --- 2:24:14 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T09:05:26.332Z) --- 2:35:26 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T09:10:12.477Z) --- 2:40:12 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T09:10:29.322Z) --- 2:40:29 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T09:10:41.960Z) --- 2:40:41 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T09:12:58.406Z) --- 2:42:58 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T09:18:57.474Z) --- 2:48:57 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T09:20:34.490Z) --- 2:50:34 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T09:20:40.485Z) --- 2:50:40 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T09:22:30.756Z) --- 2:52:30 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T09:23:20.536Z) --- 2:53:20 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T14:50:30.955Z) --- 8:20:30 PM Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T14:51:43.594Z) --- 8:21:43 PM Fri Jan 21 2022
+[error]: connect ECONNREFUSED 127.0.0.1:27017  =======>  2022-01-21T14:52:12.748Z) --- 8:22:12 PM Fri Jan 21 2022
+[error]: connect ECONNREFUSED 127.0.0.1:27017  =======>  2022-01-21T14:52:12.756Z) --- 8:22:12 PM Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T14:52:57.899Z) --- 8:22:57 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T14:54:06.196Z) --- 8:24:06 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T14:59:47.880Z) --- 8:29:47 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T14:59:57.643Z) --- 8:29:57 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:00:30.128Z) --- 8:30:30 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:00:58.023Z) --- 8:30:58 pm Fri Jan 21 2022
+[error]: Email already exists. Please use with another  =======>  2022-01-21T15:01:01.554Z) --- 8:31:01 pm Fri Jan 21 2022
+[error]: userId.to_string is not a function  =======>  2022-01-21T15:02:41.567Z) --- 8:32:41 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:04:00.129Z) --- 8:34:00 pm Fri Jan 21 2022
+[error]: Email already exists. Please use with another  =======>  2022-01-21T15:04:01.497Z) --- 8:34:01 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:04:31.505Z) --- 8:34:31 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:04:37.292Z) --- 8:34:37 pm Fri Jan 21 2022
+[error]: Internal Server Error  =======>  2022-01-21T15:04:46.088Z) --- 8:34:46 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:04:56.117Z) --- 8:34:56 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:05:13.120Z) --- 8:35:13 pm Fri Jan 21 2022
+[error]: Internal Server Error  =======>  2022-01-21T15:05:15.111Z) --- 8:35:15 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:05:42.577Z) --- 8:35:42 pm Fri Jan 21 2022
+[error]: Internal Server Error  =======>  2022-01-21T15:05:46.136Z) --- 8:35:46 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:07:36.917Z) --- 8:37:36 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:08:29.340Z) --- 8:38:29 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:11:29.644Z) --- 8:41:29 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:12:13.003Z) --- 8:42:13 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:12:56.578Z) --- 8:42:56 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:12:59.178Z) --- 8:42:59 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:13:24.748Z) --- 8:43:24 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:13:36.660Z) --- 8:43:36 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:13:59.365Z) --- 8:43:59 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:14:09.959Z) --- 8:44:09 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:15:21.254Z) --- 8:45:21 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:15:30.231Z) --- 8:45:30 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:16:11.554Z) --- 8:46:11 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:16:24.213Z) --- 8:46:24 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:16:26.409Z) --- 8:46:26 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:16:31.090Z) --- 8:46:31 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:16:49.869Z) --- 8:46:49 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:16:55.001Z) --- 8:46:55 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:17:03.885Z) --- 8:47:03 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:17:42.803Z) --- 8:47:42 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:18:02.832Z) --- 8:48:02 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:18:15.683Z) --- 8:48:15 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:18:52.117Z) --- 8:48:52 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:19:00.865Z) --- 8:49:00 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:19:09.836Z) --- 8:49:09 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:19:20.784Z) --- 8:49:20 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:22:09.800Z) --- 8:52:09 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:22:58.833Z) --- 8:52:58 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:23:02.859Z) --- 8:53:02 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:24:23.372Z) --- 8:54:23 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:24:36.821Z) --- 8:54:36 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:24:39.849Z) --- 8:54:39 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:25:54.564Z) --- 8:55:54 pm Fri Jan 21 2022
+[error]: User didn't exist. Please use with another one  =======>  2022-01-21T15:26:22.293Z) --- 8:56:22 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:26:34.271Z) --- 8:56:34 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:26:55.741Z) --- 8:56:55 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:28:00.690Z) --- 8:58:00 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:28:35.977Z) --- 8:58:35 pm Fri Jan 21 2022
+[error]: accessToken is not defined  =======>  2022-01-21T15:28:41.068Z) --- 8:58:41 pm Fri Jan 21 2022
+[error]: accessToken is not defined  =======>  2022-01-21T15:29:35.349Z) --- 8:59:35 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:29:52.897Z) --- 8:59:52 pm Fri Jan 21 2022
+[error]: Email already exists. Please use with another one.  =======>  2022-01-21T15:29:58.712Z) --- 8:59:58 pm Fri Jan 21 2022
+[error]: user.isPasswordCorrect is not a function  =======>  2022-01-21T15:30:02.856Z) --- 9:00:02 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:31:10.261Z) --- 9:01:10 pm Fri Jan 21 2022
+[error]: newUser is not defined  =======>  2022-01-21T15:31:12.201Z) --- 9:01:12 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T15:31:23.479Z) --- 9:01:23 pm Fri Jan 21 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-21T19:22:19.226Z) --- 12:52:19 am Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:13:09.053Z) --- 12:43:09 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:16:01.374Z) --- 12:46:01 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:16:21.089Z) --- 12:46:21 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:18:43.714Z) --- 12:48:43 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:21:56.666Z) --- 12:51:56 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:30:25.075Z) --- 1:00:25 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:30:44.883Z) --- 1:00:44 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:31:59.234Z) --- 1:01:59 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:32:50.293Z) --- 1:02:50 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:33:24.705Z) --- 1:03:24 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:34:24.988Z) --- 1:04:24 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:34:50.092Z) --- 1:04:50 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:35:35.598Z) --- 1:05:35 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:36:12.050Z) --- 1:06:12 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:36:21.548Z) --- 1:06:21 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:37:31.719Z) --- 1:07:31 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:38:09.335Z) --- 1:08:09 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:38:14.984Z) --- 1:08:14 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:38:24.317Z) --- 1:08:24 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:38:59.294Z) --- 1:08:59 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:39:40.487Z) --- 1:09:40 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:39:47.996Z) --- 1:09:47 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:39:51.021Z) --- 1:09:51 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:40:42.391Z) --- 1:10:42 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:41:16.128Z) --- 1:11:16 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:41:39.719Z) --- 1:11:39 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:41:43.665Z) --- 1:11:43 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:41:46.192Z) --- 1:11:46 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:42:11.730Z) --- 1:12:11 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:43:03.651Z) --- 1:13:03 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:43:08.445Z) --- 1:13:08 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:43:27.028Z) --- 1:13:27 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:44:22.490Z) --- 1:14:22 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:57:05.119Z) --- 1:27:05 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:58:25.543Z) --- 1:28:25 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:58:26.708Z) --- 1:28:26 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:58:29.911Z) --- 1:28:29 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:59:26.123Z) --- 1:29:26 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:59:32.613Z) --- 1:29:32 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T07:59:48.759Z) --- 1:29:48 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:01:25.078Z) --- 1:31:25 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:03:03.041Z) --- 1:33:03 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:03:20.793Z) --- 1:33:20 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:03:22.290Z) --- 1:33:22 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:04:21.734Z) --- 1:34:21 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:04:42.182Z) --- 1:34:42 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:04:58.944Z) --- 1:34:58 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:05:08.494Z) --- 1:35:08 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:05:26.429Z) --- 1:35:26 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:06:13.441Z) --- 1:36:13 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:06:33.795Z) --- 1:36:33 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:06:55.006Z) --- 1:36:55 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:08:02.117Z) --- 1:38:02 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:08:04.665Z) --- 1:38:04 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:08:28.000Z) --- 1:38:28 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T08:09:28.000Z) --- 1:39:28 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:09:55.232Z) --- 1:39:55 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:10:37.197Z) --- 1:40:37 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:10:52.313Z) --- 1:40:52 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:11:15.040Z) --- 1:41:15 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T08:11:18.084Z) --- 1:41:18 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:11:24.716Z) --- 1:41:24 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:11:26.287Z) --- 1:41:26 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:12:58.558Z) --- 1:42:58 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:13:17.577Z) --- 1:43:17 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:13:18.801Z) --- 1:43:18 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:13:37.804Z) --- 1:43:37 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:15:39.177Z) --- 1:45:39 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:16:24.209Z) --- 1:46:24 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:16:26.193Z) --- 1:46:26 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:16:32.936Z) --- 1:46:32 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:16:41.747Z) --- 1:46:41 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:16:44.879Z) --- 1:46:44 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:16:46.209Z) --- 1:46:46 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:16:59.622Z) --- 1:46:59 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:17:02.130Z) --- 1:47:02 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:17:10.324Z) --- 1:47:10 pm Sat Jan 22 2022
+[error]: req.cookies.toString is not a function  =======>  2022-01-22T08:17:12.984Z) --- 1:47:12 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:17:27.236Z) --- 1:47:27 pm Sat Jan 22 2022
+[error]: Cannot convert object to primitive value  =======>  2022-01-22T08:17:29.045Z) --- 1:47:29 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:17:39.333Z) --- 1:47:39 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:17:40.620Z) --- 1:47:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:19:35.525Z) --- 1:49:35 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:47:21.310Z) --- 2:17:21 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:47:34.530Z) --- 2:17:34 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:47:56.404Z) --- 2:17:56 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:48:00.641Z) --- 2:18:00 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:48:15.562Z) --- 2:18:15 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:48:35.093Z) --- 2:18:35 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T08:49:40.348Z) --- 2:19:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:49:45.476Z) --- 2:19:45 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:50:00.320Z) --- 2:20:00 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:52:56.284Z) --- 2:22:56 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:53:10.206Z) --- 2:23:10 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:55:51.116Z) --- 2:25:51 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:21.499Z) --- 2:26:21 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:36.469Z) --- 2:26:36 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:37.908Z) --- 2:26:37 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:38.490Z) --- 2:26:38 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:38.765Z) --- 2:26:38 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:38.965Z) --- 2:26:38 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:39.146Z) --- 2:26:39 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:39.321Z) --- 2:26:39 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:39.466Z) --- 2:26:39 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:39.632Z) --- 2:26:39 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:39.808Z) --- 2:26:39 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:40.011Z) --- 2:26:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:40.044Z) --- 2:26:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:40.391Z) --- 2:26:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:40.413Z) --- 2:26:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:40.575Z) --- 2:26:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:40.845Z) --- 2:26:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:40.985Z) --- 2:26:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:41.002Z) --- 2:26:41 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:41.162Z) --- 2:26:41 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:41.307Z) --- 2:26:41 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:41.461Z) --- 2:26:41 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:41.604Z) --- 2:26:41 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:41.880Z) --- 2:26:41 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:42.047Z) --- 2:26:42 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:42.222Z) --- 2:26:42 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:42.378Z) --- 2:26:42 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:42.541Z) --- 2:26:42 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:42.683Z) --- 2:26:42 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:42.824Z) --- 2:26:42 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:42.970Z) --- 2:26:42 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:43.112Z) --- 2:26:43 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:43.264Z) --- 2:26:43 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:43.416Z) --- 2:26:43 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:43.742Z) --- 2:26:43 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:43.928Z) --- 2:26:43 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:44.092Z) --- 2:26:44 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:44.282Z) --- 2:26:44 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:44.455Z) --- 2:26:44 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:44.596Z) --- 2:26:44 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:44.811Z) --- 2:26:44 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:02:58.419Z) --- 2:32:58 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T09:03:31.950Z) --- 2:33:31 pm Sat Jan 22 2022
+[error]: jwt expired  =======>  2022-01-22T09:05:20.746Z) --- 2:35:20 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:05:39.211Z) --- 2:35:39 pm Sat Jan 22 2022
+[error]: Internal Server Error  =======>  2022-01-22T09:06:48.990Z) --- 2:36:48 pm Sat Jan 22 2022
+[error]: Internal Server Error  =======>  2022-01-22T09:07:30.565Z) --- 2:37:30 pm Sat Jan 22 2022
+[error]: Internal Server Error  =======>  2022-01-22T09:07:46.270Z) --- 2:37:46 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:08:02.981Z) --- 2:38:02 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:08:09.390Z) --- 2:38:09 pm Sat Jan 22 2022
+[error]: Internal Server Error  =======>  2022-01-22T09:08:11.095Z) --- 2:38:11 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:08:34.382Z) --- 2:38:34 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:08:38.493Z) --- 2:38:38 pm Sat Jan 22 2022
+[error]: Internal Server Error  =======>  2022-01-22T09:08:45.139Z) --- 2:38:45 pm Sat Jan 22 2022
+[error]: jwt expired  =======>  2022-01-22T09:10:12.009Z) --- 2:40:12 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:11:17.356Z) --- 2:41:17 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:11:33.555Z) --- 2:41:33 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:11:43.820Z) --- 2:41:43 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:11:46.707Z) --- 2:41:46 pm Sat Jan 22 2022
+[error]: Internal Server Error  =======>  2022-01-22T09:11:48.656Z) --- 2:41:48 pm Sat Jan 22 2022
+[error]: jwt expired  =======>  2022-01-22T09:12:25.294Z) --- 2:42:25 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:12:54.213Z) --- 2:42:54 pm Sat Jan 22 2022
+[error]: jwt expired  =======>  2022-01-22T09:12:55.106Z) --- 2:42:55 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:13:06.716Z) --- 2:43:06 pm Sat Jan 22 2022
+[error]: jwt expired  =======>  2022-01-22T09:13:42.094Z) --- 2:43:42 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:14:32.121Z) --- 2:44:32 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:14:33.299Z) --- 2:44:33 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:14:55.093Z) --- 2:44:55 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:14:57.170Z) --- 2:44:57 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:15:28.621Z) --- 2:45:28 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:15:30.925Z) --- 2:45:30 pm Sat Jan 22 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-22T09:15:34.717Z) --- 2:45:34 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:15:51.924Z) --- 2:45:51 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:17:34.188Z) --- 2:47:34 pm Sat Jan 22 2022
+[error]: Bad Request  =======>  2022-01-22T09:17:39.762Z) --- 2:47:39 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:18:06.964Z) --- 2:48:06 pm Sat Jan 22 2022
+[error]: Refresh token not provided  =======>  2022-01-22T09:18:10.174Z) --- 2:48:10 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:20:25.407Z) --- 2:50:25 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:20:44.237Z) --- 2:50:44 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:21:03.230Z) --- 2:51:03 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:21:27.677Z) --- 2:51:27 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:21:34.395Z) --- 2:51:34 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:22:21.573Z) --- 2:52:21 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T09:22:42.171Z) --- 2:52:42 pm Sat Jan 22 2022
+[error]: Internal Server Error  =======>  2022-01-22T09:23:18.850Z) --- 2:53:18 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:23:28.212Z) --- 2:53:28 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T09:24:07.378Z) --- 2:54:07 pm Sat Jan 22 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-22T09:24:57.554Z) --- 2:54:57 pm Sat Jan 22 2022
+[error]: Refresh token not provided  =======>  2022-01-22T09:27:52.577Z) --- 2:57:52 pm Sat Jan 22 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-22T09:28:01.400Z) --- 2:58:01 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T09:36:43.695Z) --- 3:06:43 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T09:39:29.420Z) --- 3:09:29 pm Sat Jan 22 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-22T09:39:39.091Z) --- 3:09:39 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:42:40.724Z) --- 8:12:40 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:43:02.286Z) --- 8:13:02 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:43:26.442Z) --- 8:13:26 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:44:06.682Z) --- 8:14:06 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:44:16.331Z) --- 8:14:16 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:44:50.339Z) --- 8:14:50 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T14:45:05.771Z) --- 8:15:05 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T14:45:06.306Z) --- 8:15:06 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:45:25.106Z) --- 8:15:25 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T14:47:25.263Z) --- 8:17:25 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:47:36.751Z) --- 8:17:36 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:48:22.211Z) --- 8:18:22 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T14:48:24.255Z) --- 8:18:24 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T14:48:26.642Z) --- 8:18:26 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T14:48:27.414Z) --- 8:18:27 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:48:53.610Z) --- 8:18:53 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:48:58.340Z) --- 8:18:58 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:50:19.017Z) --- 8:20:19 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:55:11.817Z) --- 8:25:11 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:58:27.672Z) --- 8:28:27 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:59:04.905Z) --- 8:29:04 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:59:30.966Z) --- 8:29:30 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T14:59:39.814Z) --- 8:29:39 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:00:00.188Z) --- 8:30:00 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:00:13.178Z) --- 8:30:13 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:03:51.411Z) --- 8:33:51 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:04:40.707Z) --- 8:34:40 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:04:48.255Z) --- 8:34:48 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:04:59.975Z) --- 8:34:59 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:06:37.984Z) --- 8:36:37 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:07:37.686Z) --- 8:37:37 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:07:46.811Z) --- 8:37:46 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:07:56.095Z) --- 8:37:56 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:07:58.493Z) --- 8:37:58 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:08:04.629Z) --- 8:38:04 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:08:24.009Z) --- 8:38:24 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:08:52.053Z) --- 8:38:52 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:09:05.048Z) --- 8:39:05 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:10:55.075Z) --- 8:40:55 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:11:03.265Z) --- 8:41:03 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:11:31.649Z) --- 8:41:31 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:11:39.157Z) --- 8:41:39 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:12:02.543Z) --- 8:42:02 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:12:16.091Z) --- 8:42:16 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:12:33.060Z) --- 8:42:33 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:13:00.430Z) --- 8:43:00 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:13:11.238Z) --- 8:43:11 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:13:15.270Z) --- 8:43:15 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:13:21.572Z) --- 8:43:21 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:13:38.468Z) --- 8:43:38 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:13:57.592Z) --- 8:43:57 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:14:00.820Z) --- 8:44:00 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:14:14.079Z) --- 8:44:14 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:14:21.667Z) --- 8:44:21 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:14:30.253Z) --- 8:44:30 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:14:55.700Z) --- 8:44:55 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:15:03.371Z) --- 8:45:03 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:15:08.953Z) --- 8:45:08 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:15:45.479Z) --- 8:45:45 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:15:56.336Z) --- 8:45:56 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:16:13.704Z) --- 8:46:13 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:16:29.561Z) --- 8:46:29 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:17:38.521Z) --- 8:47:38 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:18:13.085Z) --- 8:48:13 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:18:39.598Z) --- 8:48:39 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:19:03.580Z) --- 8:49:03 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:19:20.159Z) --- 8:49:20 pm Sat Jan 22 2022
+[info]: Server running on port 8000🚀  =======>  2022-01-22T15:19:30.355Z) --- 8:49:30 pm Sat Jan 22 2022

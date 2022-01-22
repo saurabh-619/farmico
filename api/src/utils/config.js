@@ -1,5 +1,7 @@
 const compression = require("compression");
 const rateLimit = require("express-rate-limit");
+const swaggerJsdoc = require("swagger-jsdoc");
+const path = require("path");
 
 exports.compressionConfig = {
   threshold: 2 * 1000,
@@ -17,3 +19,33 @@ exports.globalRateLimiter = rateLimit({
   standardHeaders: true,
   legacyHeaders: false,
 });
+
+const swaggerOptions = {
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "Farmico's Community API",
+      version: "0.1.0",
+      description:
+        "This is a production API of the application Farmico made with Express and documented with Swagger",
+      license: {
+        name: "MIT",
+        url: "https://spdx.org/licenses/MIT.html",
+      },
+      contact: {
+        name: "Farmico",
+        url: "https://" + process.env.CLIENT_DOMAIN,
+        email: "projecttracker.web@gmail.com",
+      },
+    },
+    servers: [
+      {
+        url: "http://localhost:8000/auth",
+        description: "Development server",
+      },
+    ],
+  },
+  apis: [path.join(__dirname, "src", "routes", "auth.routes.js"), "index.js"],
+};
+
+exports.specs = swaggerJsdoc(swaggerOptions);

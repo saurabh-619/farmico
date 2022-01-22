@@ -1,9 +1,9 @@
-const { mongoose, Schema, model } = require("../lib");
+const { Schema, model } = require("mongoose");
 
 const blogSchema = new Schema(
   {
     creator: {
-      type: Schema.Types,
+      type: Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
@@ -41,4 +41,4 @@ const blogSchema = new Schema(
   { timestamps: true }
 );
 
-exports.Blog = model("Blog", blogSchema);
+module.exports = model("Blog", blogSchema);

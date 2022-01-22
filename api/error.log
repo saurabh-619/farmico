@@ -1,2 +1,120 @@
  [error]: connect ECONNREFUSED 127.0.0.1:2717  =======> 2022-01-18T20:13:59.346Z
 [error]: Requested route does not exits.  =======>  2022-01-18T20:38:27.723Z) --- 2:08:27 am Wed Jan 19 2022
+[error]: Requested route does not exit.  =======>  2022-01-20T19:51:44.610Z) --- 1:21:44 am Fri Jan 21 2022
+[error]: Requested route does not exit.  =======>  2022-01-20T19:52:22.033Z) --- 1:22:22 am Fri Jan 21 2022
+[error]: Cannot destructure property 'name' of '(intermediate value)' as it is undefined.  =======>  2022-01-20T19:53:58.491Z) --- 1:23:58 am Fri Jan 21 2022
+[error]: "name" is required  =======>  2022-01-20T19:54:23.069Z) --- 1:24:23 am Fri Jan 21 2022
+[error]: "username" is required  =======>  2022-01-20T19:54:54.440Z) --- 1:24:54 am Fri Jan 21 2022
+[error]: "email" is required  =======>  2022-01-20T19:55:03.621Z) --- 1:25:03 am Fri Jan 21 2022
+[error]: "password" is required  =======>  2022-01-20T19:55:26.461Z) --- 1:25:26 am Fri Jan 21 2022
+[error]: "password" length must be at least 6 characters long  =======>  2022-01-20T19:57:08.418Z) --- 1:27:08 am Fri Jan 21 2022
+[error]: Cannot read properties of undefined (reading 'findOne')  =======>  2022-01-20T20:22:06.339Z) --- 1:52:06 am Fri Jan 21 2022
+[error]: Email already exists. Please use with another  =======>  2022-01-20T20:23:31.130Z) --- 1:53:31 am Fri Jan 21 2022
+[error]: Username already taken. Please try another one.  =======>  2022-01-20T20:23:36.336Z) --- 1:53:36 am Fri Jan 21 2022
+[error]: connect ECONNREFUSED 127.0.0.1:27017  =======>  2022-01-21T14:52:12.748Z) --- 8:22:12 PM Fri Jan 21 2022
+[error]: connect ECONNREFUSED 127.0.0.1:27017  =======>  2022-01-21T14:52:12.756Z) --- 8:22:12 PM Fri Jan 21 2022
+[error]: Email already exists. Please use with another  =======>  2022-01-21T15:01:01.554Z) --- 8:31:01 pm Fri Jan 21 2022
+[error]: userId.to_string is not a function  =======>  2022-01-21T15:02:41.567Z) --- 8:32:41 pm Fri Jan 21 2022
+[error]: Email already exists. Please use with another  =======>  2022-01-21T15:04:01.497Z) --- 8:34:01 pm Fri Jan 21 2022
+[error]: Internal Server Error  =======>  2022-01-21T15:04:46.088Z) --- 8:34:46 pm Fri Jan 21 2022
+[error]: Internal Server Error  =======>  2022-01-21T15:05:15.111Z) --- 8:35:15 pm Fri Jan 21 2022
+[error]: Internal Server Error  =======>  2022-01-21T15:05:46.136Z) --- 8:35:46 pm Fri Jan 21 2022
+[error]: User didn't exist. Please use with another one  =======>  2022-01-21T15:26:22.293Z) --- 8:56:22 pm Fri Jan 21 2022
+[error]: accessToken is not defined  =======>  2022-01-21T15:28:41.068Z) --- 8:58:41 pm Fri Jan 21 2022
+[error]: accessToken is not defined  =======>  2022-01-21T15:29:35.349Z) --- 8:59:35 pm Fri Jan 21 2022
+[error]: Email already exists. Please use with another one.  =======>  2022-01-21T15:29:58.712Z) --- 8:59:58 pm Fri Jan 21 2022
+[error]: user.isPasswordCorrect is not a function  =======>  2022-01-21T15:30:02.856Z) --- 9:00:02 pm Fri Jan 21 2022
+[error]: newUser is not defined  =======>  2022-01-21T15:31:12.201Z) --- 9:01:12 pm Fri Jan 21 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T08:09:28.000Z) --- 1:39:28 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T08:11:18.084Z) --- 1:41:18 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:11:26.287Z) --- 1:41:26 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:12:58.558Z) --- 1:42:58 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:13:17.577Z) --- 1:43:17 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:13:18.801Z) --- 1:43:18 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:13:37.804Z) --- 1:43:37 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:15:39.177Z) --- 1:45:39 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:16:44.879Z) --- 1:46:44 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:16:46.209Z) --- 1:46:46 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:17:02.130Z) --- 1:47:02 pm Sat Jan 22 2022
+[error]: req.cookies.toString is not a function  =======>  2022-01-22T08:17:12.984Z) --- 1:47:12 pm Sat Jan 22 2022
+[error]: Cannot convert object to primitive value  =======>  2022-01-22T08:17:29.045Z) --- 1:47:29 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:17:40.620Z) --- 1:47:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:19:35.525Z) --- 1:49:35 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:47:21.310Z) --- 2:17:21 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:48:15.562Z) --- 2:18:15 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:48:35.093Z) --- 2:18:35 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:49:45.476Z) --- 2:19:45 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:50:00.320Z) --- 2:20:00 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:52:56.284Z) --- 2:22:56 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:53:10.206Z) --- 2:23:10 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:55:51.116Z) --- 2:25:51 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:21.499Z) --- 2:26:21 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:36.469Z) --- 2:26:36 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:37.908Z) --- 2:26:37 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:38.490Z) --- 2:26:38 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:38.765Z) --- 2:26:38 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:38.965Z) --- 2:26:38 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:39.146Z) --- 2:26:39 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:39.321Z) --- 2:26:39 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:39.466Z) --- 2:26:39 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:39.632Z) --- 2:26:39 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:39.808Z) --- 2:26:39 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:40.011Z) --- 2:26:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:40.044Z) --- 2:26:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:40.391Z) --- 2:26:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:40.413Z) --- 2:26:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:40.575Z) --- 2:26:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:40.845Z) --- 2:26:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:40.985Z) --- 2:26:40 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:41.002Z) --- 2:26:41 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:41.162Z) --- 2:26:41 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:41.307Z) --- 2:26:41 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:41.461Z) --- 2:26:41 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:41.604Z) --- 2:26:41 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:41.880Z) --- 2:26:41 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:42.047Z) --- 2:26:42 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:42.222Z) --- 2:26:42 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:42.378Z) --- 2:26:42 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:42.541Z) --- 2:26:42 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:42.683Z) --- 2:26:42 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:42.824Z) --- 2:26:42 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:42.970Z) --- 2:26:42 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:43.112Z) --- 2:26:43 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:43.264Z) --- 2:26:43 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:43.416Z) --- 2:26:43 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:43.742Z) --- 2:26:43 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:43.928Z) --- 2:26:43 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:44.092Z) --- 2:26:44 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:44.282Z) --- 2:26:44 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:44.455Z) --- 2:26:44 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:44.596Z) --- 2:26:44 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T08:56:44.811Z) --- 2:26:44 pm Sat Jan 22 2022
+[error]: Access token couldn't found. Issue a new token, Or log in again  =======>  2022-01-22T09:03:31.950Z) --- 2:33:31 pm Sat Jan 22 2022
+[error]: jwt expired  =======>  2022-01-22T09:05:20.746Z) --- 2:35:20 pm Sat Jan 22 2022
+[error]: Internal Server Error  =======>  2022-01-22T09:06:48.990Z) --- 2:36:48 pm Sat Jan 22 2022
+[error]: Internal Server Error  =======>  2022-01-22T09:07:30.565Z) --- 2:37:30 pm Sat Jan 22 2022
+[error]: Internal Server Error  =======>  2022-01-22T09:07:46.270Z) --- 2:37:46 pm Sat Jan 22 2022
+[error]: Internal Server Error  =======>  2022-01-22T09:08:11.095Z) --- 2:38:11 pm Sat Jan 22 2022
+[error]: Internal Server Error  =======>  2022-01-22T09:08:45.139Z) --- 2:38:45 pm Sat Jan 22 2022
+[error]: jwt expired  =======>  2022-01-22T09:10:12.009Z) --- 2:40:12 pm Sat Jan 22 2022
+[error]: Internal Server Error  =======>  2022-01-22T09:11:48.656Z) --- 2:41:48 pm Sat Jan 22 2022
+[error]: jwt expired  =======>  2022-01-22T09:12:25.294Z) --- 2:42:25 pm Sat Jan 22 2022
+[error]: jwt expired  =======>  2022-01-22T09:12:55.106Z) --- 2:42:55 pm Sat Jan 22 2022
+[error]: jwt expired  =======>  2022-01-22T09:13:42.094Z) --- 2:43:42 pm Sat Jan 22 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-22T09:15:34.717Z) --- 2:45:34 pm Sat Jan 22 2022
+[error]: Bad Request  =======>  2022-01-22T09:17:39.762Z) --- 2:47:39 pm Sat Jan 22 2022
+[error]: Refresh token not provided  =======>  2022-01-22T09:18:10.174Z) --- 2:48:10 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T09:22:42.171Z) --- 2:52:42 pm Sat Jan 22 2022
+[error]: Internal Server Error  =======>  2022-01-22T09:23:18.850Z) --- 2:53:18 pm Sat Jan 22 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-22T09:24:57.554Z) --- 2:54:57 pm Sat Jan 22 2022
+[error]: Refresh token not provided  =======>  2022-01-22T09:27:52.577Z) --- 2:57:52 pm Sat Jan 22 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-22T09:28:01.400Z) --- 2:58:01 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T09:36:43.695Z) --- 3:06:43 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T09:39:29.420Z) --- 3:09:29 pm Sat Jan 22 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-22T09:39:39.091Z) --- 3:09:39 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T14:45:05.771Z) --- 8:15:05 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T14:45:06.306Z) --- 8:15:06 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T14:47:25.263Z) --- 8:17:25 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T14:48:24.255Z) --- 8:18:24 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T14:48:26.642Z) --- 8:18:26 pm Sat Jan 22 2022
+[error]: Requested route does not exit.  =======>  2022-01-22T14:48:27.414Z) --- 8:18:27 pm Sat Jan 22 2022

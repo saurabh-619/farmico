@@ -1,4 +1,5 @@
-const { mongoose, appLogger } = require("../lib/index");
+const mongoose = require("mongoose");
+const appLogger = require("./logger");
 
 mongoose
   .connect(process.env.DB_URI)
