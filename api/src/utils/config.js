@@ -1,7 +1,6 @@
 const compression = require("compression");
 const rateLimit = require("express-rate-limit");
 const swaggerJsdoc = require("swagger-jsdoc");
-const path = require("path");
 
 exports.compressionConfig = {
   threshold: 2 * 1000,
@@ -40,12 +39,12 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "http://localhost:8000/auth",
+        url: "http://localhost:8000",
         description: "Development server",
       },
     ],
   },
-  apis: [path.join(__dirname, "src", "routes", "auth.routes.js"), "index.js"],
+  apis: ["./src/routes/**.js"], // always use absolute path
 };
 
 exports.specs = swaggerJsdoc(swaggerOptions);

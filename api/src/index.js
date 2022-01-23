@@ -62,8 +62,8 @@ app.get("/team", authMiddleware, (_, res) => {
 
 app.use("/auth", authRouter);
 app.use("/user", userRouter);
-app.use("/blog", blogRouter);
-app.use("/result", resultRouter);
+app.use("/blogs", blogRouter);
+app.use("/results", resultRouter);
 
 // Fallback Route modules
 app.use(async (_, __, next) => {
@@ -73,6 +73,7 @@ app.use(async (_, __, next) => {
 app.use((error, _, res, next) => {
   appLogger.error(error.message);
   res.status(error.status || 500).json({
+    ok: false,
     status: error.status || 500,
     error: error.message,
   });

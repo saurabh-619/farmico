@@ -1,8 +1,35 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model, Types } = require("mongoose");
+
+const likeSchema = new Schema(
+  {
+    user: {
+      type: Types.ObjectId,
+      ref: "User",
+      unique: true,
+    },
+  },
+  { timestamps: true }
+);
+
+const commentSchema = new Schema(
+  {
+    body: {
+      type: String,
+      trim: true,
+      minlength: 35,
+      required: true,
+    },
+    user: {
+      type: Types.ObjectId,
+      ref: "User",
+    },
+  },
+  { timestamps: true }
+);
 
 const blogSchema = new Schema(
   {
-    creator: {
+    author: {
       type: Schema.Types.ObjectId,
       ref: "User",
       required: true,
@@ -37,8 +64,22 @@ const blogSchema = new Schema(
       maxlength: 1000,
       required: true,
     },
+    likes: {
+      type: [likeSchema],
+    },
+    comments: {
+      type: [commentSchema],
+    },
   },
   { timestamps: true }
 );
+
+blogSchema.virtual("likesCount").get(function () {
+  return this.likes.length;
+});
+
+blogSchema.virtual("commentsCount").get(() => {
+  return this.comments.length;
+});
 
 module.exports = model("Blog", blogSchema);
