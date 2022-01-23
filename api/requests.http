@@ -5,9 +5,10 @@ GET http://localhost:8000/
 
 ### 
 GET http://localhost:8000/team 
-Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVhZDE3Mzk2NWY3Y2I4NDRkZDRiMjgiLCJpYXQiOjE2NDI4NDI3ODcsImV4cCI6MTY0Mjg0MjgxMiwiYXVkIjoiNjFlYWQxNzM5NjVmN2NiODQ0ZGQ0YjI4IiwiaXNzIjoiZmFybWljby52ZXJjZWwuY29tIn0.ZWyQ85av45BSt_28k4zqLjZZjRMg4PFSCcocOJbraO0; Max-Age=25; Domain=127.0.0.1; Path=/; Expires=Sat, 22 Jan 2022 09:13:32 GMT; HttpOnly; Secure
-Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVhZDE3Mzk2NWY3Y2I4NDRkZDRiMjgiLCJpYXQiOjE2NDI4NDMxMDcsImV4cCI6MTY0Mjg0NDAwNywiYXVkIjoiNjFlYWQxNzM5NjVmN2NiODQ0ZGQ0YjI4IiwiaXNzIjoiZmFybWljby52ZXJjZWwuY29tIn0.vr14leE9jyux0-LmLU4e11eHRUYL9Lg7mViw7kdvRKI; Max-Age=900; Domain=127.0.0.1; Path=/; Expires=Sat, 22 Jan 2022 09:33:27 GMT; HttpOnly; Secure
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVhZDE3Mzk2NWY3Y2I4NDRkZDRiMjgiLCJpYXQiOjE2NDI5NTA5MzcsImV4cCI6MTY0Mjk1MjQzNywiYXVkIjoiNjFlYWQxNzM5NjVmN2NiODQ0ZGQ0YjI4IiwiaXNzIjoiZmFybWljby52ZXJjZWwuY29tIn0.DCkssN2CxPbpd6oiVGf7yREzXuLzuOQ3T-dlHpkzEsc; Max-Age=1500; Domain=127.0.0.1; Path=/; Expires=Sun, 23 Jan 2022 15:40:37 GMT; HttpOnly; Secure
+Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVhZDE3Mzk2NWY3Y2I4NDRkZDRiMjgiLCJpYXQiOjE2NDI5NTA5MzcsImV4cCI6MTY0Mjk1MTgzNywiYXVkIjoiNjFlYWQxNzM5NjVmN2NiODQ0ZGQ0YjI4IiwiaXNzIjoiZmFybWljby52ZXJjZWwuY29tIn0.2lAETdxD9_NLDunsGzWFGIOGidauMDGbIMrxkz8Z80Y; Max-Age=900; Domain=127.0.0.1; Path=/; Expires=Sun, 23 Jan 2022 15:30:37 GMT; HttpOnly; Secure
 
+# 1. Auth
 ###
 POST http://localhost:8000/auth/login
 Content-Type: application/json
@@ -15,6 +16,17 @@ Content-Type: application/json
 {
 	"email":"saurabh@gmail.com",
 	"password":"123456"
+}
+
+###
+POST http://localhost:8000/auth/register
+Content-Type: application/json
+
+{
+	"email":"test@gmail.com",
+	"password":"123456",
+	"username":"test",
+	"name":"test bro"
 }
 
 ###
@@ -26,3 +38,21 @@ DELETE http://localhost:8000/auth/logout
 Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVhZDE3Mzk2NWY3Y2I4NDRkZDRiMjgiLCJpYXQiOjE2NDI4NDMxMDcsImV4cCI6MTY0Mjg0NDAwNywiYXVkIjoiNjFlYWQxNzM5NjVmN2NiODQ0ZGQ0YjI4IiwiaXNzIjoiZmFybWljby52ZXJjZWwuY29tIn0.vr14leE9jyux0-LmLU4e11eHRUYL9Lg7mViw7kdvRKI; Max-Age=900; Domain=127.0.0.1; Path=/; Expires=Sat, 22 Jan 2022 09:33:27 GMT; HttpOnly; Secure
 
 
+# 2. User
+###
+GET http://localhost:8000/user/me
+# Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVhZDE3Mzk2NWY3Y2I4NDRkZDRiMjgiLCJpYXQiOjE2NDI5NTA5MzcsImV4cCI6MTY0Mjk1MjQzNywiYXVkIjoiNjFlYWQxNzM5NjVmN2NiODQ0ZGQ0YjI4IiwiaXNzIjoiZmFybWljby52ZXJjZWwuY29tIn0.DCkssN2CxPbpd6oiVGf7yREzXuLzuOQ3T-dlHpkzEsc; Max-Age=1500; Domain=127.0.0.1; Path=/; Expires=Sun, 23 Jan 2022 15:40:37 GMT; HttpOnly; Secure
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVkNzQwM2M5NDUwYmZjN2Q0MDI0ZDgiLCJpYXQiOjE2NDI5NTE2ODMsImV4cCI6MTY0Mjk1MzE4MywiYXVkIjoiNjFlZDc0MDNjOTQ1MGJmYzdkNDAyNGQ4IiwiaXNzIjoiZmFybWljby52ZXJjZWwuY29tIn0.QrviF5CiwMWFIfbHFM-HoxCsN7PuEiYLFZ8L0FZGbE8; Max-Age=1500; Domain=127.0.0.1; Path=/; Expires=Sun, 23 Jan 2022 15:53:04 GMT; HttpOnly; Secure
+
+###
+POST http://localhost:8000/user/update-profile
+# Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVhZDE3Mzk2NWY3Y2I4NDRkZDRiMjgiLCJpYXQiOjE2NDI5NTA5MzcsImV4cCI6MTY0Mjk1MjQzNywiYXVkIjoiNjFlYWQxNzM5NjVmN2NiODQ0ZGQ0YjI4IiwiaXNzIjoiZmFybWljby52ZXJjZWwuY29tIn0.DCkssN2CxPbpd6oiVGf7yREzXuLzuOQ3T-dlHpkzEsc; Max-Age=1500; Domain=127.0.0.1; Path=/; Expires=Sun, 23 Jan 2022 15:40:37 GMT; HttpOnly; Secure
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVkNzQwM2M5NDUwYmZjN2Q0MDI0ZDgiLCJpYXQiOjE2NDI5NTE2ODMsImV4cCI6MTY0Mjk1MzE4MywiYXVkIjoiNjFlZDc0MDNjOTQ1MGJmYzdkNDAyNGQ4IiwiaXNzIjoiZmFybWljby52ZXJjZWwuY29tIn0.QrviF5CiwMWFIfbHFM-HoxCsN7PuEiYLFZ8L0FZGbE8; Max-Age=1500; Domain=127.0.0.1; Path=/; Expires=Sun, 23 Jan 2022 15:53:04 GMT; HttpOnly; Secure
+Content-Type: application/json
+
+{
+	"email":"test@gmail.com",
+	"password":"123456",
+	"username":"test",
+	"name":"test bruh"
+}

@@ -1,4 +1,4 @@
-exports.getBlogs = (req, res, next) => {
+exports.getBlogs = async (req, res, next) => {
   try {
     res.status(200).json({ ok: true });
   } catch (error) {
@@ -7,7 +7,7 @@ exports.getBlogs = (req, res, next) => {
   }
 };
 
-exports.getBlog = (req, res, next) => {
+exports.getBlog = async (req, res, next) => {
   const { id } = req.params;
 
   try {
@@ -18,7 +18,7 @@ exports.getBlog = (req, res, next) => {
   }
 };
 
-exports.deleteBlog = (req, res, next) => {
+exports.deleteBlog = async (req, res, next) => {
   try {
     const { id } = req.params;
 
@@ -29,7 +29,7 @@ exports.deleteBlog = (req, res, next) => {
   }
 };
 
-exports.voteABlog = (req, res, next) => {
+exports.voteABlog = async (req, res, next) => {
   const { id } = req.params;
 
   try {
@@ -40,7 +40,7 @@ exports.voteABlog = (req, res, next) => {
   }
 };
 
-exports.commentABlog = (req, res, next) => {
+exports.commentABlog = async (req, res, next) => {
   const { id } = req.params;
 
   try {

@@ -122,3 +122,15 @@
 [error]: Requested route does not exit.  =======>  2022-01-22T19:50:49.165Z) --- 1:20:49 am Sun Jan 23 2022
 [error]: Requested route does not exit.  =======>  2022-01-22T19:50:50.286Z) --- 1:20:50 am Sun Jan 23 2022
 [error]: Requested route does not exit.  =======>  2022-01-22T19:50:52.053Z) --- 1:20:52 am Sun Jan 23 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-23T15:03:44.980Z) --- 8:33:44 pm Sun Jan 23 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-23T15:04:59.228Z) --- 8:34:59 pm Sun Jan 23 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-23T15:07:12.898Z) --- 8:37:12 pm Sun Jan 23 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-23T15:10:00.394Z) --- 8:40:00 pm Sun Jan 23 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-23T15:10:14.268Z) --- 8:40:14 pm Sun Jan 23 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-23T15:14:43.474Z) --- 8:44:43 pm Sun Jan 23 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-23T15:15:25.885Z) --- 8:45:25 pm Sun Jan 23 2022
+[error]: Requested route does not exit.  =======>  2022-01-23T15:29:26.065Z) --- 8:59:26 pm Sun Jan 23 2022
+[error]: User validation failed: password: Path `password` is required., email: Path `email` is required., username: Path `username` is required., name: Path `name` is required.  =======>  2022-01-23T15:33:39.764Z) --- 9:03:39 pm Sun Jan 23 2022
+[error]: updatedUser is not defined  =======>  2022-01-23T15:36:12.454Z) --- 9:06:12 pm Sun Jan 23 2022
+[error]: registerSchema is not defined  =======>  2022-01-23T15:37:32.831Z) --- 9:07:32 pm Sun Jan 23 2022
+[error]: "password" length must be at least 6 characters long  =======>  2022-01-23T15:37:48.608Z) --- 9:07:48 pm Sun Jan 23 2022

@@ -35,10 +35,7 @@ exports.login = async (req, res, next) => {
     // Set cookies
     setCookies(res, accessToken, refreshToken);
 
-    res.status(200).json({
-      accessToken,
-      refreshToken,
-    });
+    res.status(200).json({ ok: true, accessToken, refreshToken });
   } catch (error) {
     next(error);
   }
@@ -75,10 +72,7 @@ exports.register = async (req, res, next) => {
     // Set cookies
     setCookies(res, accessToken, refreshToken);
 
-    return res.status(201).json({
-      accessToken,
-      refreshToken,
-    });
+    return res.status(201).json({ ok: true, accessToken, refreshToken });
   } catch (error) {
     next(error);
   }
@@ -96,10 +90,7 @@ exports.refreshToken = async (req, res, next) => {
     // Set cookies
     setCookies(res, newAccessToken, newRefreshToken);
 
-    res.status(201).json({
-      newAccessToken,
-      newRefreshToken,
-    });
+    res.status(201).json({ ok: true, newAccessToken, newRefreshToken });
   } catch (error) {
     next(error);
   }
@@ -116,7 +107,7 @@ exports.logout = async (req, res, next) => {
     const val = await redisClient.DEL(userId);
     console.log({ msg: `[logout] user - ${userId} => `, val });
 
-    res.status(204);
+    res.status(204).json({ ok: true });
   } catch (error) {
     next(error);
   }

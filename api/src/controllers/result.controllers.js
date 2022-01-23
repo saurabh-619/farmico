@@ -1,4 +1,4 @@
-exports.getResults = (req, res, next) => {
+exports.getResults = async (req, res, next) => {
   try {
     res.status(200).json({ ok: true });
   } catch (error) {
@@ -7,7 +7,7 @@ exports.getResults = (req, res, next) => {
   }
 };
 
-exports.getResult = (req, res, next) => {
+exports.getResult = async (req, res, next) => {
   const { id } = req.params;
 
   try {
@@ -18,7 +18,7 @@ exports.getResult = (req, res, next) => {
   }
 };
 
-exports.postResult = (req, res, next) => {
+exports.postResult = async (req, res, next) => {
   try {
     res.status(200).json({ ok: true });
   } catch (error) {
@@ -27,7 +27,7 @@ exports.postResult = (req, res, next) => {
   }
 };
 
-exports.deleteResult = (req, res, next) => {
+exports.deleteResult = async (req, res, next) => {
   const { id } = req.params;
 
   try {
