@@ -1,3 +1,6 @@
+const Result = require("../models/Result.model");
+const createError = require("http-errors");
+
 exports.getResults = async (req, res, next) => {
   try {
     res.status(200).json({ ok: true });

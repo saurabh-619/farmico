@@ -101,3 +101,18 @@ exports.setCookies = async (res, accessToken, refreshToken) => {
     domain: "127.0.0.1",
   });
 };
+
+exports.destroyCookies = async (res) => {
+  res.cookie("accessToken", "", {
+    secure: !__dev__,
+    httpOnly: true,
+    maxAge: 0,
+    domain: "127.0.0.1",
+  });
+  res.cookie("refreshToken", "", {
+    secure: !__dev__,
+    httpOnly: true,
+    maxAge: 0,
+    domain: "127.0.0.1",
+  });
+};

@@ -134,3 +134,4 @@
 [error]: updatedUser is not defined  =======>  2022-01-23T15:36:12.454Z) --- 9:06:12 pm Sun Jan 23 2022
 [error]: registerSchema is not defined  =======>  2022-01-23T15:37:32.831Z) --- 9:07:32 pm Sun Jan 23 2022
 [error]: "password" length must be at least 6 characters long  =======>  2022-01-23T15:37:48.608Z) --- 9:07:48 pm Sun Jan 23 2022
+[error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-29T15:54:36.037Z) --- 9:24:36 pm Sat Jan 29 2022

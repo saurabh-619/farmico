@@ -1,3 +1,6 @@
+const Blog = require("../models/Blog.model");
+const createError = require("http-errors");
+
 exports.getBlogs = async (req, res, next) => {
   try {
     res.status(200).json({ ok: true });

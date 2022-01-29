@@ -7,6 +7,7 @@ const {
   signRefreshToken,
   setCookies,
   verifyRefreshToken,
+  destroyCookies,
 } = require("../helpers/tokens");
 const { redisClient } = require("../helpers/redis");
 
@@ -105,6 +106,9 @@ exports.logout = async (req, res, next) => {
     const userId = await verifyRefreshToken(refreshToken);
 
     const val = await redisClient.DEL(userId);
+
+    destroyCookies();
+
     console.log({ msg: `[logout] user - ${userId} => `, val });
 
     res.status(204).json({ ok: true });

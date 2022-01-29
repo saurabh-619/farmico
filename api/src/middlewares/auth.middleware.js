@@ -17,6 +17,7 @@ exports.authMiddleware = async (req, res, next) => {
       );
     }
     req.payload = payload;
+    req.userId = userId;
     next();
   } catch (error) {
     console.log({ error: error.message });
