@@ -3,21 +3,21 @@ on:
   push:
     branches: [main]
 
-  pull_request:
-    branches: [main]
+  # pull_request:
+  #   branches: [main]
 
 env:
   PORT: 8000
   REDIS_URL: redis://localhost:6379
   DB_URI: mongodb://localhost:27017/farmico
 
+defaults:
+  run:
+    working-directory: ./api
+
 jobs:
   build-app:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./api
-
     services:
       mongodb:
         image: mongo
