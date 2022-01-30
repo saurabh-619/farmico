@@ -3,7 +3,7 @@ const { combine, timestamp, printf } = format;
 const { __dev__ } = require("./../utils/constants");
 
 const myFormat = printf(({ level, message, label, timestamp }) => {
-  return `[${level}]: ${message}  =======>  ${timestamp}) --- ${new Date(
+  return `[${level}]: ${message} --- ${new Date(
     timestamp
   ).toLocaleTimeString()} ${new Date(timestamp).toDateString()}`;
 });
@@ -18,9 +18,9 @@ const appLogger = createLogger({
 });
 
 if (__dev__) {
-  logger.add(
+  appLogger.add(
     new transports.Console({
-      format: format.simple(),
+      format: format.combine(format.timestamp()),
     })
   );
 }

@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "generate:keys": "node src/helpers/generateKeys.js",
-    "dev": "nodemon src/index.js",
-    "test": "jest --testTimeout=10000 --passWithNoTests"
+    "dev": "cross-env NODE_ENV=development nodemon src/index.js",
+    "test": "cross-env NODE_ENV=testing jest --testTimeout=10000 --passWithNoTests --detectOpenHandles"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -27,11 +27,12 @@
     "winston": "^3.4.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "jest": "^27.4.7",
     "supertest": "^6.2.2"
   },
   "jest": {
-    "testEnvironment":"node",
+    "testEnvironment": "node",
     "coveragePathIgnorePatterns": [
       "/node_modules/"
     ]

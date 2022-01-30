@@ -13,6 +13,7 @@ const {
 const appLogger = require("./helpers/logger");
 const { authRouter, userRouter, blogRouter, resultRouter } = require("./lib");
 const { authMiddleware } = require("./middlewares/auth.middleware");
+const { __isTesting__ } = require("./utils/constants");
 
 const app = express();
 
@@ -82,9 +83,9 @@ app.use((error, _, res, next) => {
 
 // Listen
 const port = process.env.PORT;
-app.listen(port, () => {
-  console.log("Server running on port " + port + "🚀");
+const server = app.listen(port, () => {
+  !__isTesting__ && console.log("Server running on port " + port + "🚀");
   appLogger.info("Server running on port " + port + "🚀");
 });
 
-module.exports = { app };
+module.exports = { app, server };
