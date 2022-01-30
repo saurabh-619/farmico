@@ -30,4 +30,4 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Run the project
-        run: yarn dev
+        run: yarn start
