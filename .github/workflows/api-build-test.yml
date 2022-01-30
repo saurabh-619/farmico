@@ -61,7 +61,7 @@ jobs:
     needs: build-app
     defaults:
       run:
-        working-directory: ./api
+        working-directory: api
     steps:
       - name: Run tests
         run: yarn test
