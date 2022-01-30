@@ -1,11 +1,18 @@
-name: Run all basic Tests
-on: [push]
+name: Build Community API server and Run basic tests
+on:
+  push:
+    branches: [main]
+
+  pull_request:
+    branches: [main]
+
 jobs:
   build-app:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./api
+
     env:
       PORT: 8000
       REDIS_URL: redis://localhost:6379
@@ -24,21 +31,34 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
       - uses: actions/setup-node@v2
         with:
           node-version: 14
+
       - name: Install redis
         run: sudo apt-get install -y redis-tools redis-server
+
       - name: Check if redis installed
         run: redis-cli ping
 
       - name: Run tree
         run: tree
+
       - name: Check node version
         run: node -v
       - name: Check yarn -v
         run: yarn -v
+
       - name: Install dependencies
         run: yarn install
-      - name: Run the project
-        run: yarn start
+
+      # - name: Run the project
+      #   run: yarn start
+
+  run-test:
+    runs-on: ubuntu-latest
+    needs: build-app
+    steps:
+      - name: Run tests
+        run: yarn test
