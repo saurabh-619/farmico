@@ -3,7 +3,19 @@ const createError = require("http-errors");
 
 exports.getBlogs = async (req, res, next) => {
   try {
-    res.status(200).json({ ok: true });
+    let { page, limit, sortBy = "createdAt", dir = "asc" } = req.query;
+
+    page = parseInt(page) || 1;
+    limit = parseInt(limit) || 10;
+    const skip = (page - 1) * limit;
+
+    const blogs = await Blog.find()
+      .limit(limit)
+      .skip(skip)
+      .sort({
+        [sortBy]: dir,
+      });
+    res.status(200).json({ ok: true, page, size: blogs.length, blogs });
   } catch (error) {
     console.log({ error: error.message });
     next(error);
