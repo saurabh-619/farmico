@@ -16,7 +16,7 @@ defaults:
     working-directory: api
 
 jobs:
-  build-app:
+  buildApp:
     runs-on: ubuntu-latest
     services:
       mongodb:
@@ -58,7 +58,7 @@ jobs:
 
   run-test:
     runs-on: ubuntu-latest
-    needs: build-app
+    needs: buildApp
     steps:
       - name: Check current dir
         run: pwd
