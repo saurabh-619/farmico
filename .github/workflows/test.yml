@@ -8,8 +8,20 @@ jobs:
         working-directory: ./api
     env:
       PORT: 8000
-      DB_URI: mongodb://localhost:27017/farmico
       REDIS_URL: redis://localhost:6379
+
+    services:
+      mongodb:
+        image: mongo
+        env:
+          DB_URI: mongodb://localhost:27017/farmico
+        options: >-
+          --health-cmd mongo
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 27017:27017
 
     steps:
       - uses: actions/checkout@v2
