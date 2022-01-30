@@ -1,0 +1,33 @@
+name: Run all basic Tests
+on: [push]
+jobs:
+  buildApp:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./api
+    env:
+      PORT: 8000
+      DB_URI: mongodb://localhost:27017/farmico
+      REDIS_URL: redis://localhost:6379
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Install redis
+        run: sudo apt-get install -y redis-tools redis-server
+      - name: Check if redis installed
+        run: redis-cli ping
+
+      - name: Run tree
+        run: tree
+      - name: Check node version
+        run: node -v
+      - name: Check yarn -v
+        run: yarn -v
+      - name: Install dependencies
+        run: yarn install
+      - name: Run the project
+        run: yarn dev
