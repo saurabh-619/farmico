@@ -11,13 +11,12 @@ env:
   REDIS_URL: redis://localhost:6379
   DB_URI: mongodb://localhost:27017/farmico
 
-defaults:
-  run:
-    working-directory: api
-
 jobs:
-  buildApp:
+  build-app:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: api
     services:
       mongodb:
         image: mongo
@@ -52,15 +51,19 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-
       # - name: Run the project
       #   run: yarn start
+      - name: Run tests
+        run: yarn test
 
   run-test:
     runs-on: ubuntu-latest
-    needs: buildApp
+    defaults:
+      run:
+        working-directory: api
+    needs: build-app
     steps:
       - name: Check current dir
-        run: pwd
+        run: ls
       - name: Run tests
         run: yarn test
