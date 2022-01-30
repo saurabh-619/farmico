@@ -13,7 +13,7 @@ env:
 
 defaults:
   run:
-    working-directory: ./api
+    working-directory: api
 
 jobs:
   build-app:
@@ -60,7 +60,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build-app
     steps:
-      - name: Check dir
-        run: ls
+      - name: Check current dir
+        run: pwd
       - name: Run tests
         run: yarn test
