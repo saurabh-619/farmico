@@ -4,6 +4,7 @@ const compression = require("compression");
 const cookieParser = require("cookie-parser");
 const createErrors = require("http-errors");
 const swaggerUI = require("swagger-ui-express");
+const { version } = require("../package.json");
 
 const {
   compressionConfig,
@@ -40,7 +41,7 @@ app.use(
 app.get("/", (_, res) => {
   return res.json({
     success: true,
-    msg: "Welcome to the Farmico's API",
+    msg: "Welcome to the Farmico's API v" + version,
   });
 });
 
