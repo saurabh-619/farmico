@@ -1,0 +1,88 @@
+version: "3.8"
+services:
+  cache_service:
+    container_name: cache_service
+    image: redis:6.2-alpine
+    restart: always
+    volumes:
+      - cache_service:/data/
+    ports:
+      - 6379:6379
+    networks:
+      - shared_network
+    
+  db_service:
+    container_name: db_service
+    image: mongo
+    restart: always
+    volumes:
+      - db_service:/data/db # <service-name>:/data/db (exact given by Docker)
+    ports:
+      - 27017:27017
+    networks:
+      - shared_network
+
+  api_models:
+    container_name: api_models
+    build: 
+      context: ./models/deploy
+      dockerfile: Dockerfile
+    volumes:
+      - ./models/deploy:/usr/src/ai-models
+    ports:
+      - 5000:5000
+    restart: always
+    networks:
+      - shared_network
+
+  api_community:
+    container_name: api_community
+    depends_on:
+      - cache_service
+      - db_service
+    build: 
+      context: ./api
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./api:/usr/src/api # Map local code to the code inside container 
+      - /usr/src/api/node_modules 
+    ports:
+      - 8000:8000
+    environment: 
+      - PORT=8000
+      - DB_URI=mongodb://db_service:27017/farmico
+      - REDIS_URL=redis://cache_service:6379
+      - ACCESS_TOKEN_SECRET=983381908d90d36f2b1f494238253a7ee865f401c9b172b8f6c82dae562d4acb
+      - REFRESH_TOKEN_SECRET=7238fd89ddb4df074be1b523ec604c8b36cc1d85129466098470de0d73e57439
+      - CLIENT_DOMAIN=farmico.vercel.com
+    networks:
+      - shared_network
+    
+  web:
+    container_name: web
+    depends_on:
+      - api_community
+    build: 
+      context: ./web
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./web:/usr/src/web
+      - /usr/src/web/node_modules 
+      
+    ports:
+      - 3000:3000
+    networks:
+      - shared_network
+
+
+volumes:
+  db_service: 
+    driver: local
+  cache_service: 
+    driver: local
+
+# [optional] If network is not created, docker will create by itself
+networks:
+  shared_network: # To instatntiate, we need to add colon

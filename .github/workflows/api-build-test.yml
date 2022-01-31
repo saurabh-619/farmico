@@ -55,15 +55,3 @@ jobs:
       #   run: yarn start
       - name: Run tests
         run: yarn test
-
-  run-test:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: api
-    needs: build-app
-    steps:
-      - name: Check current dir
-        run: ls
-      - name: Run tests
-        run: yarn test

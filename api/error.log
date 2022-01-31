@@ -135,3 +135,4 @@
 [error]: registerSchema is not defined  =======>  2022-01-23T15:37:32.831Z) --- 9:07:32 pm Sun Jan 23 2022
 [error]: "password" length must be at least 6 characters long  =======>  2022-01-23T15:37:48.608Z) --- 9:07:48 pm Sun Jan 23 2022
 [error]: Access token has expired. Issue a new token, Or log in again  =======>  2022-01-29T15:54:36.037Z) --- 9:24:36 pm Sat Jan 29 2022
+[error]: Requested route does not exit. --- 3:20:43 PM Mon Jan 31 2022
