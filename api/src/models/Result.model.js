@@ -13,7 +13,7 @@ const resultSchema = new Schema(
       required: true,
     },
     confidence: {
-      type: Types.Decimal128,
+      type: String,
       required: true,
     },
     // 1. Disease detection model
@@ -31,6 +31,10 @@ const resultSchema = new Schema(
     hasWeed: {
       type: Boolean,
       default: false,
+    },
+    ogImg: {
+      type: String,
+      required: false,
     },
     resultImg: {
       type: String,

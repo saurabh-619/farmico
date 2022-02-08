@@ -1,7 +1,7 @@
 FROM node:alpine
 
 LABEL version="1.0.0"
-LABEL description="Farmico's Community API server's image"
+LABEL description="Farmico's Next.js frontend image"
 
 # Can only use app dir
 WORKDIR /usr/src/web

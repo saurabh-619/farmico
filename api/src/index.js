@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const helmet = require("helmet");
 const compression = require("compression");
 const cookieParser = require("cookie-parser");
 const createErrors = require("http-errors");
@@ -26,6 +27,7 @@ require("./helpers/redis").connectRedis();
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
+app.use(helmet());
 app.use(morgan("dev"));
 app.use(compression(compressionConfig));
 app.use(globalRateLimiter);
@@ -41,7 +43,7 @@ app.use(
 app.get("/", (_, res) => {
   return res.json({
     success: true,
-    msg: "Welcome to the Farmico's API v" + version,
+    msg: `Welcome to the Farmico's API v${version} [${process.env.NODE_ENV}]`,
   });
 });
 

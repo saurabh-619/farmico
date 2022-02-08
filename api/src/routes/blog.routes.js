@@ -1,18 +1,21 @@
 const { Router } = require("express");
 const {
-    getBlogs,
-    getBlog,
-    deleteBlog,
-    commentABlog,
-    likeABlog,
-    createABlog,
+  getBlogs,
+  getBlog,
+  deleteBlog,
+  commentABlog,
+  likeABlog,
+  createABlog,
+  searchBlogs,
 } = require("../controllers/blog.controllers");
+const { authMiddleware } = require("../middlewares/auth.middleware");
 
 const router = Router();
 
-router.route("/").get(getBlogs).post(createABlog);
-router.route("/:id").get(getBlog).delete(deleteBlog);
-router.route("/vote/:id").post(likeABlog);
-router.route("/comment/:id").post(commentABlog);
+router.route("/").get(getBlogs).post(authMiddleware, createABlog);
+router.route("/search").get(searchBlogs);
+router.route("/:id").get(getBlog).delete(authMiddleware, deleteBlog);
+router.route("/vote/:id").put(authMiddleware, likeABlog);
+router.route("/comment/:id").put(authMiddleware, commentABlog);
 
 module.exports = router;

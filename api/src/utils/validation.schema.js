@@ -12,4 +12,33 @@ const loginSchema = Joi.object({
   password: Joi.string().trim().required(),
 });
 
-module.exports = { registerSchema, loginSchema };
+const blogSchema = Joi.object({
+  locale: Joi.string().trim().lowercase().valid("en", "mr", "hi").required(),
+  title: Joi.string().min(10).max(150).trim().required(),
+  subtitle: Joi.string().trim(),
+  body: Joi.string().min(200).max(10000).trim().required(),
+});
+
+const blogCommentSchema = Joi.object({
+  body: Joi.string().min(10).trim().required(),
+});
+
+const resultSchema = Joi.object({
+  model_type: Joi.string().valid("disease", "weed").required(), //"disease" or  "weed"
+  confidence: Joi.number().required(),
+  // 1. Disease detection model
+  label: Joi.string(),
+  isUnhealthy: Joi.boolean(),
+  // 2. Weed detection model
+  hasWeed: Joi.boolean(),
+  ogImg: Joi.string(),
+  resultImg: Joi.string(),
+});
+
+module.exports = {
+  registerSchema,
+  loginSchema,
+  blogSchema,
+  blogCommentSchema,
+  resultSchema,
+};
