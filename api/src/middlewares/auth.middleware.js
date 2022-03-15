@@ -23,6 +23,7 @@ exports.authMiddleware = async (req, res, next) => {
     console.log({ error: error.message });
     error.message =
       "Access token has expired. Issue a new token, Or log in again";
+    error.hasAccessTokenExpired = true;
     next(error);
   }
 };

@@ -1,0 +1,80 @@
+.wrapper-class {
+}
+
+.toolbar-class {
+  padding: 1rem;
+  background: $text-50 !important;
+
+  & .rdw-option-wrapper {
+    height: 35px;
+    width: 35px;
+    border-radius: 3px;
+    border: none;
+    background: transparent;
+
+    &:hover {
+      background-color: $primary-300;
+      box-shadow: none;
+    }
+  }
+
+  & .rdw-option-active {
+    box-shadow: none;
+    background-color: $primary-500;
+  }
+
+  & .rdw-dropdown-wrapper {
+    height: 35px;
+    min-width: 100px;
+    border-radius: 3px;
+    border: none;
+    background: transparent;
+
+    &:hover {
+      //   background-color: $primary-300;
+      box-shadow: none;
+    }
+
+    & .rdw-dropdown-optionwrapper {
+      overflow: hidden;
+    }
+
+    & .rdw-dropdown-optionwrapper {
+      border: none;
+      @include AppScrollBar(3px);
+      box-shadow: 1px 0px 10px 5px $text-50;
+
+      &:hover {
+        border: none;
+      }
+
+      & .rdw-dropdownoption-default,
+      & .rdw-dropdownoption-default {
+        padding: 0.3rem 0.4rem;
+      }
+    }
+  }
+}
+.toolbar-icon {
+  & img {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+.editor-class {
+  height: 50vh !important;
+  margin: 1rem 0;
+  padding: 1rem 1.5rem 0;
+  background-color: $text-50;
+  overflow-y: scroll;
+  @include AppScrollBar(4px);
+  & #placeholder-2psq5 {
+    padding: 1rem 0;
+  }
+
+  & .DraftEditor-root {
+    height: auto;
+    width: auto;
+  }
+}

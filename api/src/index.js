@@ -6,6 +6,7 @@ const cookieParser = require("cookie-parser");
 const createErrors = require("http-errors");
 const swaggerUI = require("swagger-ui-express");
 const { version } = require("../package.json");
+const cors = require("cors");
 
 const {
   compressionConfig,
@@ -27,6 +28,13 @@ require("./helpers/redis").connectRedis();
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
+app.use(
+  cors({
+    origin: process.env.CLIENT_DOMAIN,
+    credentials: true,
+  })
+);
+app.use(express.static(__dirname + "/src/images"));
 app.use(helmet());
 app.use(morgan("dev"));
 app.use(compression(compressionConfig));
@@ -76,10 +84,17 @@ app.use(async (_, __, next) => {
 
 app.use((error, _, res, next) => {
   appLogger.error(error.message);
+
   res.status(error.status || 500).json({
     ok: false,
     status: error.status || 500,
     error: error.message,
+    ...(error.hasAccessTokenExpired && {
+      hasAccessTokenExpired: error.hasAccessTokenExpired,
+    }),
+    ...(error.hasRefreshTokenExpired && {
+      hasRefreshTokenExpired: error.hasRefreshTokenExpired,
+    }),
   });
   next();
 });

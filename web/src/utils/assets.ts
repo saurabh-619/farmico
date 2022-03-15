@@ -1,0 +1,13 @@
+export const boldIcon = "/images/editor-icons/bold.svg";
+export const codeIcon = "/images/editor-icons/code.svg";
+export const imageIcon = "/images/editor-icons/image.svg";
+export const italicIcon = "/images/editor-icons/italic.svg";
+export const justifyAlignIcon = "/images/editor-icons/justify-align.svg";
+export const leftAlignIcon = "/images/editor-icons/left-align.svg";
+export const centerAlignIcon = "/images/editor-icons/center-align.svg";
+export const rightAlignIcon = "/images/editor-icons/right-align.svg";
+export const linkIcon = "/images/editor-icons/link.svg";
+export const listIcon = "/images/editor-icons/list.svg";
+export const listOlIcon = "/images/editor-icons/list-ol.svg";
+export const strikeThroughIcon = "/images/editor-icons/strikethrough.svg";
+export const underlineIcon = "/images/editor-icons/underline.svg";

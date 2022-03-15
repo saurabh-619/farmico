@@ -3,8 +3,10 @@ const createError = require("http-errors");
 const { redisClient } = require("./redis");
 const { __dev__ } = require("../utils/constants");
 
-const ACCESS_TOKEN_EXPIRATION = 5 * 25 * 60; // sec (JWT)
-const ACCESS_TOKEN_EXPIRATION_COOKIE = 5 * 25 * 1000 * 60; //mili-sec
+const ACCESS_TOKEN_EXPIRATION = 5 * 0.25 * 60; // sec (JWT)
+const ACCESS_TOKEN_EXPIRATION_COOKIE = 5 * 0.25 * 1000 * 60; //mili-sec
+// const ACCESS_TOKEN_EXPIRATION = 5 * 25 * 60; // sec (JWT)
+// const ACCESS_TOKEN_EXPIRATION_COOKIE = 5 * 25 * 1000 * 60; //mili-sec
 const REFRESH_TOKEN_EXPIRATION = 15 * 60; // sec (JWT)
 const REFRESH_TOKEN_EXPIRATION_REDIS_AND_COOKIE = 15 * 60 * 1000; //mili-sec
 
@@ -92,13 +94,11 @@ exports.setCookies = async (res, accessToken, refreshToken) => {
     secure: !__dev__,
     httpOnly: true,
     maxAge: ACCESS_TOKEN_EXPIRATION_COOKIE,
-    domain: "127.0.0.1",
   });
   res.cookie("refreshToken", refreshToken, {
     secure: !__dev__,
     httpOnly: true,
     maxAge: REFRESH_TOKEN_EXPIRATION_REDIS_AND_COOKIE,
-    domain: "127.0.0.1",
   });
 };
 
@@ -107,12 +107,10 @@ exports.destroyCookies = async (res) => {
     secure: !__dev__,
     httpOnly: true,
     maxAge: 0,
-    domain: "127.0.0.1",
   });
   res.cookie("refreshToken", "", {
     secure: !__dev__,
     httpOnly: true,
     maxAge: 0,
-    domain: "127.0.0.1",
   });
 };

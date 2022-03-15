@@ -15,7 +15,7 @@ exports.getBlogs = async (req, res, next) => {
 
     const blogs = await Blog.find()
       .select("-likes -comments")
-      .populate("author", "_id name username")
+      .populate("author", "_id name username profilePhoto")
       .limit(limit)
       .skip(skip)
       .sort({
@@ -34,13 +34,15 @@ exports.getBlogs = async (req, res, next) => {
 };
 
 exports.getBlog = async (req, res, next) => {
-  const { id } = req.params;
-  if (!id) throw new createError.NotFound("Blog couldn't found.");
+  const { slug } = req.body;
+
+  if (!slug) throw new createError.NotFound("Blog couldn't found.");
   try {
-    const blog = await Blog.findById(id)
-      .populate("author", "_id name username email")
-      .populate("likes.user", "_id name username email")
-      .populate("comments.user", "_id name username email");
+    // const blog = await Blog.findById(id)
+    const blog = await Blog.findOne({ slug })
+      .populate("author", "_id name username email profilePhoto")
+      .populate("likes.user", "_id name username email profilePhoto")
+      .populate("comments.user", "_id name username email profilePhoto");
     if (!blog) throw new createError.NotFound("Blog couldn't found.");
     res.status(200).json({
       ok: true,
@@ -61,7 +63,7 @@ exports.searchBlogs = async (req, res, next) => {
       { score: { $meta: "textScore" } }
     )
       .select("title subtitle locale slug")
-      .populate("author", "id username name")
+      .populate("author", "id username name profilePhoto")
       .sort({
         score: "desc",
       })

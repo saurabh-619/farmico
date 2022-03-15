@@ -1,0 +1,61 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Nunito:wght@300;400;500;600&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+@import "partials/constants";
+@import "partials/texteditor";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  /* font-family: Nunito, Roboto, Ubuntu; */
+  font-family: Inter;
+  user-select: none;
+  line-height: 1.5 !important;
+
+  @include AppScrollBar(8px);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.rounded-img {
+  border-radius: 50%;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.nav {
+  height: 6vh;
+}
+
+.layout-height {
+  // min-height: 92vh;
+}
+
+.hover-link {
+  &:hover {
+    box-shadow: 1.5px 1px 3px 1.5px rgba($color: aqua, $alpha: 0.3);
+  }
+}
+
+.action-btn {
+  background-color: $primary-600 !important;
+  transition: background-color 200ms ease-out;
+
+  &:hover {
+    background-color: $primary-500 !important;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+}

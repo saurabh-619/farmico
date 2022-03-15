@@ -81,18 +81,21 @@ exports.register = async (req, res, next) => {
 
 exports.refreshToken = async (req, res, next) => {
   try {
-    const { refreshToken } = req.cookies;
+    let { refreshToken } = req.cookies;
     if (!refreshToken)
       throw new createError.BadRequest("Refresh token not provided");
 
     const userId = await verifyRefreshToken(refreshToken); //   genearate tokens and send them to user
-    const newAccessToken = await signAccessToken(userId);
-    const newRefreshToken = await signRefreshToken(userId);
+    const accessToken = await signAccessToken(userId);
+    refreshToken = await signRefreshToken(userId);
     // Set cookies
-    setCookies(res, newAccessToken, newRefreshToken);
+    setCookies(res, accessToken, refreshToken);
 
-    res.status(201).json({ ok: true, newAccessToken, newRefreshToken });
+    res.status(201).json({ ok: true, accessToken, refreshToken });
   } catch (error) {
+    if (error.message === "Refresh token not provided") {
+      error.hasRefreshTokenExpired = true;
+    }
     next(error);
   }
 };
@@ -107,7 +110,7 @@ exports.logout = async (req, res, next) => {
 
     const val = await redisClient.DEL(userId);
 
-    destroyCookies();
+    destroyCookies(res);
 
     console.log({ msg: `[logout] user - ${userId} => `, val });
 

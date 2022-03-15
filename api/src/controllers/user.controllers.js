@@ -1,6 +1,9 @@
 const createError = require("http-errors");
 const User = require("../models/User.model");
-const { registerSchema } = require("../utils/validation.schema");
+const {
+  registerSchema,
+  updateUserSchema,
+} = require("../utils/validation.schema");
 
 exports.getLoggedInUser = async (req, res, next) => {
   try {
@@ -18,22 +21,44 @@ exports.getLoggedInUser = async (req, res, next) => {
 
 exports.updateProfile = async (req, res, next) => {
   try {
-    const { name, username, email, password } =
-      await registerSchema.validateAsync(req.body);
+    const { name, username, email, password, profilePhoto } =
+      await updateUserSchema.validateAsync(req.body);
+
+    console.log({ password });
 
     const { userId } = req.payload;
-    const user = await User.findById(userId).select("-password");
+    const user = await User.findById(userId);
 
     if (!user) throw new createError.NotFound("User couldn't found.");
 
     // Update profile
 
-    user.email = email;
-    user.password = password;
-    user.username = username;
-    user.name = name;
-    await user.save();
-    res.status(200).json({ ok: true, output });
+    await User.updateOne(
+      { _id: userId },
+      {
+        $set: {
+          ...req.body,
+        },
+      }
+    );
+
+    // user.email = email;
+    // user.password = password;
+    // user.username = username;
+    // user.name = name;
+    // await user.save();
+    res.status(200).json({ ok: true });
+  } catch (error) {
+    console.log({ error: error.message });
+    next(error);
+  }
+};
+
+exports.checkIfUsernameAvailable = async (req, res, next) => {
+  try {
+    const { value } = req.query;
+    const count = await User.countDocuments({ username: value });
+    res.status(200).json({ isAvailable: count === 0, count });
   } catch (error) {
     console.log({ error: error.message });
     next(error);

@@ -1,0 +1,47 @@
+$primary-main: #fa4eab;
+$primary-100: #fff2f9;
+$primary-200: #ffedf7;
+$primary-300: #fecae6;
+$primary-400: #fda7d5;
+$primary-500: #fc83c4;
+$primary-600: #fb60b3;
+$primary-700: #c83e89;
+$primary-800: #962f67;
+$primary-900: #4b1733;
+
+$bg: #fff2f9;
+
+$black: #000;
+$text: #fff;
+
+$text-main: #000;
+$text-10: rgb(236, 246, 255);
+$text-50: #f7fafc;
+$text-100: #edf2f7;
+$text-lighter: #a0aec0;
+$text-light: #718096;
+$text-dark: #4a5568;
+
+$dark-bg: #323232;
+
+@mixin AppScrollBar($width: "8px") {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $bg;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $primary-400;
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $primary-main;
+  }
+}

@@ -26,6 +26,11 @@ const userSchema = new Schema(
       ],
       required: true,
     },
+    profilePhoto: {
+      type: String,
+      default:
+        "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940g",
+    },
     password: {
       type: String,
       required: true,
@@ -39,6 +44,20 @@ userSchema.pre("save", async function (next) {
     const salt = await bcrypt.genSalt(12);
     const hashedPassword = await bcrypt.hash(this.password, salt);
     this.password = hashedPassword;
+    next();
+  } catch (error) {
+    next(error);
+  }
+});
+
+userSchema.pre("updateOne", async function (next) {
+  try {
+    const newPassword = this.getUpdate().$set.password;
+    if (newPassword) {
+      const salt = await bcrypt.genSalt(12);
+      const hashedPassword = await bcrypt.hash(newPassword, salt);
+      this.getUpdate().$set.password = hashedPassword;
+    }
     next();
   } catch (error) {
     next(error);

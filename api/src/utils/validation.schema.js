@@ -7,6 +7,14 @@ const registerSchema = Joi.object({
   password: Joi.string().min(6).required(),
 });
 
+const updateUserSchema = Joi.object({
+  name: Joi.string().required(),
+  username: Joi.string().required(),
+  email: Joi.string().email().lowercase().required(),
+  password: Joi.string().min(0),
+  profilePhoto: Joi.string(),
+});
+
 const loginSchema = Joi.object({
   email: Joi.string().email().trim().lowercase().required(),
   password: Joi.string().trim().required(),
@@ -37,6 +45,7 @@ const resultSchema = Joi.object({
 
 module.exports = {
   registerSchema,
+  updateUserSchema,
   loginSchema,
   blogSchema,
   blogCommentSchema,
