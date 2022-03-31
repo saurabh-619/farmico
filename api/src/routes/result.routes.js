@@ -16,7 +16,8 @@ router
 
 router
   .route("/:id")
-  .get(authMiddleware, getResult)
+  // .get(authMiddleware, getResult)
+  .get(getResult)
   .delete(authMiddleware, deleteResult);
 
 module.exports = router;

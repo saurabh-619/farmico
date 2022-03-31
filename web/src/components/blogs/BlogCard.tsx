@@ -1,16 +1,20 @@
 import AppAvatar from "@/elements/AppAvatar";
+import AppStatElement from "@/elements/AppStatElement";
+import useLocale from "@/hooks/useLocale";
 import * as appHelpers from "@/utils/helpers";
 import { BlogType } from "@/utils/types";
 import { Box, Flex, Heading, Icon } from "@chakra-ui/react";
 import NextLink from "next/link";
 import React from "react";
-import { FiBook, FiHeart, FiMessageCircle } from "react-icons/fi";
+import { FiBook } from "react-icons/fi";
 
 interface IBlogCard {
   blog: BlogType;
 }
 
 const BlogCard: React.FC<IBlogCard> = ({ blog }) => {
+  const { t } = useLocale();
+
   return (
     <NextLink
       href={{
@@ -33,7 +37,13 @@ const BlogCard: React.FC<IBlogCard> = ({ blog }) => {
         {/* Header */}
         <Flex alignItems="center" justifyContent="space-between">
           <Flex alignItems="center" className="left">
-            <AppAvatar src={blog.author.profilePhoto} size="45px" />
+            <AppAvatar
+              src={blog.author.profilePhoto}
+              size="45px"
+              isAdmin={blog.author.isAdmin}
+              right="-4px"
+              bottom="6px"
+            />
             <Flex mx="3" direction="column">
               <Heading
                 as="h4"
@@ -57,7 +67,7 @@ const BlogCard: React.FC<IBlogCard> = ({ blog }) => {
             <Flex alignItems="center" justifyContent="center" mr="3">
               <Icon as={FiBook} fontSize="md" color="text.lighter" mr="2" />
               <Heading fontWeight="medium" fontSize="xs" color="text.lighter">
-                {blog.readTime} mins read
+                {blog.readTime} {t.mins_read}
               </Heading>
             </Flex>
           </Box>
@@ -75,30 +85,15 @@ const BlogCard: React.FC<IBlogCard> = ({ blog }) => {
             mt="2"
             lineHeight="1.5rem"
           >
-            {blog.body.length > 300
-              ? `${blog.body.substring(0, 300)}....`
-              : blog.body}
+            {blog.bodyPreview.length > 300
+              ? `${blog.bodyPreview.substring(0, 300)}....`
+              : blog.bodyPreview}
           </Heading>
         </Box>
         {/* Footer */}
         <Flex alignItems="center" justifyContent="flex-start">
-          <Flex alignItems="center" justifyContent="center" mr="3">
-            <Icon as={FiHeart} fontSize="md" color="text.lighter" mr="2" />
-            <Heading fontWeight="medium" fontSize="sm" color="text.lighter">
-              {blog.likesCount}
-            </Heading>
-          </Flex>
-          <Flex alignItems="center" justifyContent="center">
-            <Icon
-              as={FiMessageCircle}
-              fontSize="md"
-              color="text.lighter"
-              mr="2"
-            />
-            <Heading fontWeight="medium" fontSize="sm" color="text.lighter">
-              {blog.likesCount}
-            </Heading>
-          </Flex>
+          <AppStatElement stat={blog.likesCount} isLike mr="3" />
+          <AppStatElement stat={blog.commentsCount} />
         </Flex>
       </Box>
     </NextLink>

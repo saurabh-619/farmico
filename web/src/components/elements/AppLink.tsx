@@ -1,5 +1,5 @@
-import React from "react";
 import { Link, LinkProps } from "@chakra-ui/react";
+import React from "react";
 
 interface IAppLink extends LinkProps {
   text?: string;

@@ -19,6 +19,22 @@ exports.getLoggedInUser = async (req, res, next) => {
   }
 };
 
+exports.getAUser = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+
+    console.log({ id });
+    const user = await User.findById(id).select("-password");
+
+    if (!user) throw new createError.NotFound("User couldn't found.");
+
+    res.status(200).json({ ok: true, user });
+  } catch (error) {
+    console.log({ error: error.message });
+    next(error);
+  }
+};
+
 exports.updateProfile = async (req, res, next) => {
   try {
     const { name, username, email, password, profilePhoto } =

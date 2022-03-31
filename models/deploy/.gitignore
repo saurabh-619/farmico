@@ -1,3 +1,6 @@
 venv
 /app/__pycache__/
 /app/helpers/__pycache__/
+Dockerfile
+.dockerignore
+/app/farmico-models-firebase-adminsdk-dh5ty-78950ec58a.json

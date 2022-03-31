@@ -24,7 +24,8 @@ const blogSchema = Joi.object({
   locale: Joi.string().trim().lowercase().valid("en", "mr", "hi").required(),
   title: Joi.string().min(10).max(150).trim().required(),
   subtitle: Joi.string().trim(),
-  body: Joi.string().min(200).max(10000).trim().required(),
+  body: Joi.string().min(200).trim().required(),
+  bodyPreview: Joi.string().min(80).trim().required(),
 });
 
 const blogCommentSchema = Joi.object({

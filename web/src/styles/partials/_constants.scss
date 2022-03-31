@@ -18,11 +18,17 @@ $text-main: #000;
 $text-10: rgb(236, 246, 255);
 $text-50: #f7fafc;
 $text-100: #edf2f7;
+$text-200: #e2e8f0;
+$text-300: #cbd5e0;
+$text-400: #a0aec0;
 $text-lighter: #a0aec0;
 $text-light: #718096;
 $text-dark: #4a5568;
 
 $dark-bg: #323232;
+
+$success-400: #48bb78;
+$danger-400: #f56565;
 
 @mixin AppScrollBar($width: "8px") {
   &::-webkit-scrollbar {

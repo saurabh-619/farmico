@@ -1,6 +1,7 @@
 import * as apiHelper from "@/api/api.helper";
 import AppFormButton from "@/components/form/AppFormButton";
 import useAppToast from "@/hooks/useAppToast";
+import useLocale from "@/hooks/useLocale";
 import useUser from "@/hooks/useUser";
 import { ISubtitleProps, RegisterDataType } from "@/utils/types";
 import * as validationSchema from "@/utils/validation.schema";
@@ -25,6 +26,7 @@ import { useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
 
 const Register: NextPage & ISubtitleProps = () => {
+  const { t } = useLocale();
   const { setIsAuthenticated } = useUser();
   const router = useRouter();
   const { triggerToast, triggerErrorToast } = useAppToast();
@@ -49,7 +51,7 @@ const Register: NextPage & ISubtitleProps = () => {
     async (e: any) => {
       const username = e.target.value;
       setUsername(username);
-      console.log({ username });
+      // console.log({ username });
       if (username?.length > 3) {
         const { data } = await apiHelper.checkIfUsernameAvailable(username!);
         setIsUsernameAvailable(data.isAvailable);
@@ -59,7 +61,6 @@ const Register: NextPage & ISubtitleProps = () => {
   );
 
   const handleRegister = async () => {
-    console.log("fisr");
     setLoading(true);
     const { email, password, name } = getValues();
     console.log({ email, password, name });
@@ -74,10 +75,10 @@ const Register: NextPage & ISubtitleProps = () => {
       localStorage.setItem("accessToken", response.data.accessToken);
       setIsAuthenticated(true);
       router.replace("/blogs");
-      triggerToast("Success", "Welcome to the farmico");
+      triggerToast(t.success, t.welcome_to_the_farmico);
     } catch (error: any) {
       console.log({ error });
-      triggerErrorToast("Login error", error);
+      triggerErrorToast(t.register_error, error);
     } finally {
       setLoading(false);
     }
@@ -86,7 +87,7 @@ const Register: NextPage & ISubtitleProps = () => {
   return (
     <Flex width="full" alignItems="center" minHeight="80vh" direction="column">
       <Box textAlign="center" mt="16">
-        <Heading>Register</Heading>
+        <Heading>{t.register}</Heading>
       </Box>
       <Box
         py="10"
@@ -101,7 +102,7 @@ const Register: NextPage & ISubtitleProps = () => {
       >
         <form onSubmit={handleSubmit(handleRegister)}>
           <FormControl isInvalid={errors.name !== undefined} my="6">
-            <FormLabel htmlFor="name">name</FormLabel>
+            <FormLabel htmlFor="name">{t.name}</FormLabel>
             <Input
               py="4"
               px="3"
@@ -109,7 +110,7 @@ const Register: NextPage & ISubtitleProps = () => {
               focusBorderColor="gray.600"
               borderRadius="2px"
               id="name"
-              placeholder="john doe"
+              placeholder={t.john_doe}
               {...register("name")}
             />
             {errors.name?.message && (
@@ -123,7 +124,7 @@ const Register: NextPage & ISubtitleProps = () => {
             }
             my="6"
           >
-            <FormLabel htmlFor="username">username</FormLabel>
+            <FormLabel htmlFor="username">{t.username}</FormLabel>
             <Input
               py="4"
               px="3"
@@ -131,24 +132,22 @@ const Register: NextPage & ISubtitleProps = () => {
               focusBorderColor="gray.600"
               borderRadius="2px"
               id="username"
-              placeholder="johnbhai"
+              placeholder={t.johnbhai}
               name="username"
               value={username}
               onChange={checkIfUsernameAvailble}
             />
             {(username?.length! < 4 && (
               <FormErrorMessage>
-                username can't be smaller than 4 characters
+                {t.username_small_than_4_char}
               </FormErrorMessage>
             )) ||
               (!isUsernameAvailable && (
-                <FormErrorMessage>
-                  username not available 😢. try different.
-                </FormErrorMessage>
+                <FormErrorMessage>{t.username_not_available}</FormErrorMessage>
               ))}
           </FormControl>
           <FormControl isInvalid={errors.email !== undefined} my="6">
-            <FormLabel htmlFor="email">email</FormLabel>
+            <FormLabel htmlFor="email">{t.email}</FormLabel>
             <Input
               py="4"
               px="3"
@@ -164,7 +163,7 @@ const Register: NextPage & ISubtitleProps = () => {
             )}
           </FormControl>
           <FormControl isInvalid={errors.password !== undefined} my="6">
-            <FormLabel htmlFor="password">password</FormLabel>
+            <FormLabel htmlFor="password">{t.password}</FormLabel>
             <InputGroup>
               <Input
                 py="4"
@@ -189,7 +188,9 @@ const Register: NextPage & ISubtitleProps = () => {
             )}
           </FormControl>
           <FormControl isInvalid={errors.confPassword !== undefined} my="6">
-            <FormLabel htmlFor="confirm-password">confirm password</FormLabel>
+            <FormLabel htmlFor="confirm-password">
+              {t.confirm_password}
+            </FormLabel>
             <InputGroup>
               <Input
                 py="4"
@@ -215,11 +216,11 @@ const Register: NextPage & ISubtitleProps = () => {
               </FormErrorMessage>
             )}
           </FormControl>
-          <AppFormButton loading={loading} text="register" />
+          <AppFormButton loading={loading} text={t.register} />
         </form>
       </Box>
       <Heading as="h5" fontSize="sm" fontWeight="normal" mt="5">
-        Already have an account?{" "}
+        {t.already_have_an_account}{" "}
         <NextLink href="/login" passHref>
           <Link>
             <Heading
@@ -228,7 +229,7 @@ const Register: NextPage & ISubtitleProps = () => {
               fontSize="sm"
               fontWeight="semibold"
             >
-              log in
+              {t.log_in}
             </Heading>
           </Link>
         </NextLink>

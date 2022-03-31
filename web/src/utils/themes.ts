@@ -13,6 +13,7 @@ const colors = {
     300: "#fecae6",
     400: "#fda7d5",
     500: "#fc83c4",
+    600: "#fb60b3",
     700: "#c83e89",
     800: "#962f67",
     900: "#4b1733",
@@ -29,12 +30,24 @@ const colors = {
   "dark-bg": {
     main: "#323232",
   },
+  success: {
+    400: "#48BB78",
+  },
+  danger: {
+    400: "#F56565",
+  },
   black: {
     main: "#000",
+  },
+  white: {
+    main: "#fff",
   },
   text: {
     50: "#f7fafc",
     100: "#EDF2F7",
+    200: "#E2E8F0",
+    300: "#CBD5E0",
+    400: "#A0AEC0",
     main: "#000",
     lighter: "#A0AEC0",
     light: "#718096",

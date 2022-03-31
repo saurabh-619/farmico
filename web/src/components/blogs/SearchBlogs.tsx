@@ -1,21 +1,35 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
-import React, { useState } from "react";
-import { Search2Icon } from "@chakra-ui/icons";
+import { AddIcon, Search2Icon } from "@chakra-ui/icons";
+import { Box, Flex, Icon, useDisclosure } from "@chakra-ui/react";
+import NextLink from "next/link";
+import SearchModal from "./SearchModal";
 
 const SearchBlogs = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
-  const [text, setText] = useState("");
+  const { isOpen, onClose, onOpen } = useDisclosure();
 
   return (
-    <Flex
-      alignItems="center"
-      className="cursor"
-      onClick={() => setModalOpen((p) => !p)}
-    >
-      <Heading as="h3" fontWeight={"normal"} fontSize="lg" color="brand.main">
-        search
-      </Heading>
-      <Search2Icon color="brand.main" fontSize={"xl"} ml="3" />
+    <Flex alignItems="center">
+      <Flex alignItems="center" className="cursor" onClick={onOpen}>
+        <Search2Icon color="brand.main" fontSize={"xl"} />
+        <SearchModal isOpen={isOpen} onClose={onClose} onOpen={onOpen} />
+      </Flex>
+      <NextLink passHref prefetch href={`/create/blog`}>
+        <Box
+          h="9"
+          w="9"
+          borderRadius="lg"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          bg="gray.200"
+          className={`cursor`}
+          ml="4"
+          _hover={{
+            bg: "gray.100",
+          }}
+        >
+          <Icon as={AddIcon} fontSize="md" color={"success.400"} />
+        </Box>
+      </NextLink>
     </Flex>
   );
 };

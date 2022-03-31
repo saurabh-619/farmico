@@ -1,17 +1,25 @@
 import AppLink from "@/elements/AppLink";
 import useAppLoading from "@/hooks/useAppLoading";
 import useUser from "@/hooks/useUser";
-import { Avatar, Flex, Heading, HStack, Link, Text } from "@chakra-ui/react";
-import Image from "next/image";
+import { Avatar, Flex, Heading, HStack, Text } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import { useCallback } from "react";
+import useLocale from "@/hooks/useLocale";
 
 const Navbar = () => {
   const router = useRouter();
-  const { isAuthenticated, logout, user } = useUser();
+  const { isAuthenticated, user } = useUser();
   const { appLoading } = useAppLoading();
-  console.log({ isAuthenticated });
+
+  const { t } = useLocale();
+
+  const isCurrentRoute = useCallback(
+    (route: string) => {
+      return router.asPath === route;
+    },
+    [router]
+  );
 
   return (
     <Flex
@@ -21,30 +29,52 @@ const Navbar = () => {
       justifyContent="space-between"
       className="nav"
     >
-      <Text fontSize={"4xl"} fontWeight="bold">
-        farmico
-        <Heading as="small" color="brand.main">
-          .
-        </Heading>
-      </Text>
+      <NextLink passHref href="/">
+        <Text fontSize={"4xl"} fontWeight="bold" className="link-hover">
+          {t.farmico}
+          <Heading as="small" color="brand.main">
+            .
+          </Heading>
+        </Text>
+      </NextLink>
       {!appLoading && (
         <HStack spacing={8}>
           {isAuthenticated && (
             <>
               <NextLink href={"/models"} passHref>
-                <AppLink fontSize={"medium"} text="AI tools" />
+                <AppLink
+                  fontSize={"medium"}
+                  text={t.aiTools}
+                  color={isCurrentRoute("/models") ? "brand.500" : "black"}
+                  className="link-hover"
+                />
               </NextLink>
               <NextLink href={"/blogs"} passHref>
-                <AppLink fontSize={"medium"} color={""} text="blogs" />
+                <AppLink
+                  fontSize={"medium"}
+                  text={t.blogs}
+                  color={isCurrentRoute("/blogs") ? "brand.500" : "black"}
+                  className="link-hover"
+                />
               </NextLink>
             </>
           )}
-          <NextLink href={"/about"} passHref>
-            <AppLink fontSize={"medium"} text="about" />
-          </NextLink>
+          {/* <NextLink href={"/about"} passHref>
+            <AppLink
+              fontSize={"medium"}
+              text="about"
+              color={isCurrentRoute("/about") ? "brand.500" : "black"}
+              className="link-hover"
+            />
+          </NextLink> */}
           {!isAuthenticated && (
             <NextLink href={"/login"} passHref>
-              <AppLink fontSize={"medium"} text="login" />
+              <AppLink
+                fontSize={"medium"}
+                text={t.login}
+                color={isCurrentRoute("/login") ? "brand.500" : "black"}
+                className="link-hover"
+              />
             </NextLink>
           )}
           {isAuthenticated && (

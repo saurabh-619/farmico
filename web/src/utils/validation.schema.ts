@@ -27,10 +27,10 @@ export const login = yup.object({
 });
 
 export const blog = yup.object({
-  locale: yup.string().trim().lowercase().oneOf(["en", "mr", "hi"]).required(),
+  locale: yup.string().trim().lowercase().oneOf(["en", "mr", "hi"]),
   title: yup.string().min(10).max(150).trim().required(),
-  subtitle: yup.string().trim(),
-  body: yup.string().min(200).max(10000).trim().required(),
+  subtitle: yup.string().min(10).max(150).trim().required(),
+  body: yup.string().min(200).max(10000).trim(),
 });
 
 export const blogComment = yup.object({

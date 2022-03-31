@@ -16,10 +16,12 @@ const AppFormButton: React.FC<IAppButtonProps> = ({ loading, text }) => {
       variant="solid"
       w="full"
       isLoading={loading}
+      bg="brand.600"
       borderRadius="2px"
-      className="action-btn"
       color="white"
       disabled={loading}
+      _hover={{ opacity: 0.8 }}
+      _active={{ opacity: 0.8 }}
     >
       {loading ? <Spinner color="white" /> : text}
     </Button>

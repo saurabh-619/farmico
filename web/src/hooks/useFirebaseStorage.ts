@@ -1,7 +1,7 @@
+import useAppToast from "@/hooks/useAppToast";
 import { fStorage } from "@/lib/firebase";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import { useState, useEffect } from "react";
-import useAppToast from "@/hooks/useAppToast";
+import { useEffect, useState } from "react";
 
 export const useFirebaseStorage = (
   userId: string,

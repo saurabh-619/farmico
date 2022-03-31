@@ -1,6 +1,6 @@
+import { UserType } from "@/utils/types";
 import create from "zustand";
 import { devtools } from "zustand/middleware";
-import { localesType, localeType, UserType } from "@/utils/types";
 import * as storeHelpers from "./store.helper";
 
 export interface StoreState {
@@ -14,6 +14,10 @@ export interface StoreState {
   // setCurrentLocale: (locale: localeType) => void;
   setUser: (user: UserType) => void;
   logout: () => void;
+
+  // Route loading
+  isAnimating: boolean;
+  setIsAnimating: (isAnimating: boolean) => void;
 }
 
 const initialState = {
@@ -22,6 +26,9 @@ const initialState = {
   appLoading: false,
   // locale: "en",
   // locales: ["en", "mr", "hi"],
+
+  // Route loading
+  isAnimating: false,
 };
 
 export const useStore = create<StoreState>(
@@ -49,5 +56,8 @@ export const useStore = create<StoreState>(
     //   set({ locale });
     // },
     logout: () => storeHelpers.storeLogout(set),
+
+    // Route loading
+    setIsAnimating: (isAnimating) => set(() => ({ isAnimating })),
   }))
 );

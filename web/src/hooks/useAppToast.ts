@@ -1,4 +1,4 @@
-import { useToast, UseToastOptions } from "@chakra-ui/react";
+import { useToast } from "@chakra-ui/react";
 
 const useAppToast = () => {
   const toast = useToast({
@@ -23,7 +23,7 @@ const useAppToast = () => {
   const triggerErrorToast = (title: string, error: any) => {
     toast({
       title,
-      description: error.response.data.error,
+      description: error?.response?.data?.error || "",
       status: "error",
     });
   };

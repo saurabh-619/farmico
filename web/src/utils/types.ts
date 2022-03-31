@@ -3,6 +3,7 @@ export type localesType = localeType[];
 
 export type UserType = {
   _id: string;
+  isAdmin?: boolean;
   name: string;
   username?: string;
   email?: string;
@@ -13,11 +14,14 @@ export type UserType = {
 
 export type BlogType = {
   _id: string;
+  isPrivate?: boolean;
   title: string;
+  subtitle?: string;
   author: Partial<UserType>;
   locale: string;
   slug: string;
   body: string;
+  bodyPreview: string;
   readTime: number;
   likesCount: number;
   commentsCount: number;
@@ -75,6 +79,25 @@ export type UpdateUserDataType = {
   confPassword?: string;
 };
 
+export type PostBlogType = {
+  _id?: string;
+  locale: string;
+  title: string;
+  subtitle: string;
+  body: string;
+  bodyPreview: string;
+};
+
+export type PostCommentData = {
+  blogId: string;
+  body: string;
+};
+
+export type DeleteCommentData = {
+  blogId: string;
+  commentId: string;
+};
+
 export type ISubtitleProps = {
   subtitle: string;
 };
@@ -93,3 +116,41 @@ export enum BLOG_LOCALE_TYPE {
   MARATHI = "mr",
   HINDI = "hi",
 }
+
+// Models
+export type PostDiseaseResult = {
+  model_type: string;
+  confidence: string;
+  label: string;
+  ogImg: string;
+};
+
+export type ModelType = "disease" | "weed";
+export enum ModelEnum {
+  DISEASE = "disease",
+  WEED = "weed",
+}
+
+export type PostModelResult = {
+  // input specific
+  model_type: ModelType;
+  confidence: string;
+  hasWeed?: boolean;
+  label?: string;
+  ogImg: string;
+  resultImg?: string;
+
+  // result specific
+  _id?: string;
+  user?: UserType;
+  isUnhealthy?: boolean;
+  createdAt?: string;
+  updatedAt?: string;
+};
+
+export type BlogsFetcherArgs = {
+  limit?: number;
+  page?: number;
+  order?: string;
+  sortBy?: string;
+};

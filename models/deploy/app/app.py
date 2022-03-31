@@ -1,12 +1,17 @@
+import os
 from flask import Flask, request 
+from flask_cors import CORS, cross_origin
 
 # from app.helpers.plant_disease import *
 from app.helpers.plant_disease_tflite import *
-from app.helpers.weed_detection import *
+from app.helpers.weed_detection import * 
 
 app = Flask(__name__)
+CORS(app)
+  
 
 @app.route("/")
+@cross_origin(supports_credentials=True)
 def home_view():
     return {
         "success":"true",
@@ -15,6 +20,7 @@ def home_view():
 
 
 @app.route("/user")
+@cross_origin(supports_credentials=True)
 def index():
     return {
         "name": "Saurabh",
@@ -23,6 +29,7 @@ def index():
 
  
 @app.route("/plant-disease", methods=['POST'])
+@cross_origin(supports_credentials=True)
 def plantDisease():
     imgfile = request.files.get("image", "")
     confidence, label = get_predictions(imgfile)
@@ -32,8 +39,12 @@ def plantDisease():
         "label": label
     }
 
+    
+
+
 
 @app.route("/weed-detection", methods=["POST"])
+@cross_origin(supports_credentials=True)
 def weedDetection():
     # init_weed_model() 
     imgfile = request.files.get("image", "")

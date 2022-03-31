@@ -3,6 +3,7 @@ import { handleRequest } from "@/api/client";
 import AppAvatar from "@/elements/AppAvatar";
 import useAppToast from "@/hooks/useAppToast";
 import { useFirebaseStorage } from "@/hooks/useFirebaseStorage";
+import useLocale from "@/hooks/useLocale";
 import useUser from "@/hooks/useUser";
 import { UpdateUserDataType } from "@/utils/types";
 import * as validationSchema from "@/utils/validation.schema";
@@ -27,6 +28,7 @@ import { useForm } from "react-hook-form";
 import AppFormButton from "../form/AppFormButton";
 
 const UpdateInfo = () => {
+  const { t } = useLocale();
   const router = useRouter();
   const { user, isAuthenticated, setUser } = useUser();
   const { triggerToast, triggerErrorToast } = useAppToast();
@@ -68,8 +70,8 @@ const UpdateInfo = () => {
 
     if (imgFile.size / 1024 > 1500) {
       return triggerToast(
-        "Not allowed",
-        "Image size can't exceed 1.5MB",
+        t.invalid_request,
+        t.image_size_cant_exceed_1_5_mb,
         "error"
       );
     }
@@ -106,10 +108,10 @@ const UpdateInfo = () => {
       const { data } = await handleRequest(apiHelper.loggedInUser);
       setUser(data.user);
       router.push("/profile");
-      triggerToast("Success", "Profile updated successfully");
+      triggerToast(t.success, t.profile_updated_successfully);
     } catch (error: any) {
       console.log({ error });
-      triggerErrorToast("Error", error.data.response.error);
+      triggerErrorToast(t.error, error.data.response.error);
     } finally {
       setLoading(false);
     }
@@ -179,7 +181,7 @@ const UpdateInfo = () => {
           </Box>
           <form onSubmit={handleSubmit(handleUpdate)} style={{ width: "45%" }}>
             <FormControl isInvalid={errors.name !== undefined} my="8">
-              <FormLabel htmlFor="name">name</FormLabel>
+              <FormLabel htmlFor="name">{t.name}</FormLabel>
               <Input
                 py="4"
                 px="3"
@@ -187,7 +189,7 @@ const UpdateInfo = () => {
                 focusBorderColor="gray.600"
                 borderRadius="2px"
                 id="name"
-                placeholder="john doe"
+                placeholder={t.john_doe}
                 {...register("name")}
               />
               {errors.name?.message && (
@@ -198,7 +200,7 @@ const UpdateInfo = () => {
               isInvalid={username?.length! < 4 || !isUsernameAvailable}
               my="6"
             >
-              <FormLabel htmlFor="username">username</FormLabel>
+              <FormLabel htmlFor="username">{t.username}</FormLabel>
               <Input
                 py="4"
                 px="3"
@@ -206,24 +208,24 @@ const UpdateInfo = () => {
                 focusBorderColor="gray.600"
                 borderRadius="2px"
                 id="username"
-                placeholder="johnbhai"
+                placeholder={t.johnbhai}
                 name="username"
                 value={username}
                 onChange={checkIfUsernameAvailble}
               />
               {(username?.length! < 4 && (
                 <FormErrorMessage>
-                  username can't be smaller than 4 characters
+                  {t.username_small_than_4_char}
                 </FormErrorMessage>
               )) ||
                 (!isUsernameAvailable && (
                   <FormErrorMessage>
-                    username not available 😢. try different.
+                    {t.username_not_available}
                   </FormErrorMessage>
                 ))}
             </FormControl>
             <FormControl isInvalid={errors.email !== undefined} my="6">
-              <FormLabel htmlFor="email">email</FormLabel>
+              <FormLabel htmlFor="email">{t.email}</FormLabel>
               <Input
                 py="4"
                 px="3"
@@ -239,7 +241,7 @@ const UpdateInfo = () => {
               )}
             </FormControl>
             <FormControl isInvalid={errors.password !== undefined} my="6">
-              <FormLabel htmlFor="password">password</FormLabel>
+              <FormLabel htmlFor="password">{t.password}</FormLabel>
               <InputGroup>
                 <Input
                   py="4"
@@ -264,7 +266,9 @@ const UpdateInfo = () => {
               )}
             </FormControl>
             <FormControl isInvalid={errors.confPassword !== undefined} my="6">
-              <FormLabel htmlFor="confirm-password">confirm password</FormLabel>
+              <FormLabel htmlFor="confirm-password">
+                {t.confirm_password}
+              </FormLabel>
               <InputGroup>
                 <Input
                   py="4"
@@ -290,7 +294,7 @@ const UpdateInfo = () => {
                 </FormErrorMessage>
               )}
             </FormControl>
-            <AppFormButton loading={loading} text="update" />
+            <AppFormButton loading={loading} text={t.update} />
           </form>
         </Flex>
       )}

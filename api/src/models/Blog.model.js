@@ -34,6 +34,10 @@ const blogSchema = new Schema(
       ref: "User",
       required: true,
     },
+    isPrivate: {
+      type: Boolean,
+      default: false,
+    },
     locale: {
       type: String,
       enum: ["en", "mr", "hi"],
@@ -54,7 +58,10 @@ const blogSchema = new Schema(
     body: {
       type: String,
       minlength: 200,
-      maxlength: 10000,
+      // maxlength: 10000,
+    },
+    bodyPreview: {
+      type: String,
     },
     readTime: {
       // In min

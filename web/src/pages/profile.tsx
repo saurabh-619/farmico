@@ -1,16 +1,18 @@
-import React from "react";
-import { NextPage } from "next";
+import Blogs from "@/components/profile/blogs/Blogs";
+import Info from "@/components/profile/Info";
+import ProfileMenuItem from "@/components/profile/ProfileMenuItem";
+import Reports from "@/components/profile/reports/Reports";
+import UpdateInfo from "@/components/profile/UpdateInfo";
+import useLocale from "@/hooks/useLocale";
+import AppHeading from "@/layout/AppHeading";
 import withAuth from "@/lib/withAuth";
 import { CURRENT_PROFILE_TYPE, ISubtitleProps } from "@/utils/types";
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
+import { NextPage } from "next";
 import { useRouter } from "next/router";
-import ProfileMenuItem from "@/components/profile/ProfileMenuItem";
-import Info from "@/components/profile/Info";
-import UpdateInfo from "@/components/profile/UpdateInfo";
-import Reports from "@/components/profile/Reports";
-import Blogs from "@/components/profile/Blogs";
 
 const Profile: NextPage & ISubtitleProps = () => {
+  const { t } = useLocale();
   const router = useRouter();
   const currentType = router.query.type as CURRENT_PROFILE_TYPE;
 
@@ -26,33 +28,30 @@ const Profile: NextPage & ISubtitleProps = () => {
     <Box pt="8">
       <Flex alignItems="flex-start" justifyContent="space-between">
         <Box className="left" w="15vw" minH="75vh">
-          <Heading
-            as="h3"
-            fontSize={"x-large"}
-            fontWeight="semibold"
-            color="text.dark"
-          >
-            profile
-          </Heading>
+          <AppHeading title={t.profile} />
           <Flex
             direction="column"
             alignItems="flex-start"
             justifyContent="flex-start"
             mt="10"
           >
-            <ProfileMenuItem text="my info" type="" currentType={currentType} />
             <ProfileMenuItem
-              text="reports"
+              text={t.my_info}
+              type=""
+              currentType={currentType}
+            />
+            <ProfileMenuItem
+              text={t.reports}
               type={CURRENT_PROFILE_TYPE.REPORTS}
               currentType={currentType}
             />
             <ProfileMenuItem
-              text="blogs"
+              text={t.blogs}
               type={CURRENT_PROFILE_TYPE.BLOGS}
               currentType={currentType}
             />
             <ProfileMenuItem
-              text="update info"
+              text={t.update_info}
               type={CURRENT_PROFILE_TYPE.UPDATE_INFO}
               currentType={currentType}
             />

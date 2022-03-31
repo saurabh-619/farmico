@@ -3,15 +3,17 @@
 
 @import "partials/constants";
 @import "partials/texteditor";
+@import "partials/blogs";
 
 html,
 body {
   padding: 0;
   margin: 0;
   /* font-family: Nunito, Roboto, Ubuntu; */
-  font-family: Inter;
+  font-family: Inter !important;
   user-select: none;
   line-height: 1.5 !important;
+  -webkit-font-smoothing: antialiased !important;
 
   @include AppScrollBar(8px);
 }
@@ -47,15 +49,136 @@ a {
   }
 }
 
+select.locale-select {
+  border: none;
+  color: $text-light;
+  overflow: hidden;
+  font-size: 1rem;
+  padding: 0.3rem;
+  height: 35px;
+  font-weight: 400;
+
+  &:active {
+    appearance: none;
+    border: none;
+    outline: 0;
+  }
+
+  & option {
+    height: 100%;
+    font-size: 1rem;
+  }
+}
+
 .action-btn {
-  background-color: $primary-600 !important;
-  transition: background-color 200ms ease-out;
+  background-color: $primary-600;
+  transition: all 200ms ease-out;
 
   &:hover {
-    background-color: $primary-500 !important;
+    filter: brightness(105%) !important;
   }
 }
 
 .avatar {
   border-radius: 50%;
+}
+
+.app-action-icon {
+  transition: all 100ms ease-in-out;
+
+  & svg {
+    transition: all 50ms ease-in-out;
+  }
+
+  &:hover {
+    background-color: $text-200;
+  }
+
+  &-delete {
+    @extend .app-action-icon;
+    &:hover {
+      & svg {
+        color: $danger-400;
+      }
+    }
+  }
+
+  &-edit {
+    @extend .app-action-icon;
+    &:hover {
+      & svg {
+        color: $success-400;
+      }
+    }
+  }
+}
+
+.link-hover {
+  cursor: pointer;
+  transition: all 100ms ease-out;
+  &:hover {
+    color: $primary-600;
+  }
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    transition: all 100ms ease-out;
+    &:hover {
+      color: $primary-600;
+    }
+  }
+}
+
+@keyframes mesh_anim {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(3%, -3%) scale(1.1);
+  }
+  50% {
+    transform: translate(-3%, 3%) scale(1);
+  }
+  75% {
+    transform: translate(-1%, 1%) scale(0.95);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+
+#home {
+
+  & .home-mesh {
+    background-image: url("/images/bg/mesh.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: mesh_anim 7s linear infinite alternate;
+  }
+  
+  & .home-brand-title {
+  font-weight: bold;
+  font-size: 3.5rem;
+  display: inline;
+  margin-left: .8rem;
+  position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 1rem;
+      left: 0;
+      height: 15px;
+      width: 100%;
+      background: #48bb78;
+      // background: #fda7d5;
+      z-index: -1;
+    }
+  }
 }

@@ -3,7 +3,7 @@ GET http://localhost:8000/
 
 ### 
 GET http://localhost:8000/team 
-Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyNzU2MTQ4MjEwMjJhNTczMmMxZTYiLCJpYXQiOjE2NDY0OTIyMzYsImV4cCI6MTY0NjQ5MjMxMSwiYXVkIjoiNjIyMjc1NjE0ODIxMDIyYTU3MzJjMWU2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.PV5HRAbIDs6CdS6Bpp2KUxyZO-eRRYLzjxxSlb-GDyo; Max-Age=75; Path=/; Expires=Sat, 05 Mar 2022 14:58:31 GMT; HttpOnly
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIzODljNmNiYmZhZjA3YmZhMmMxYjgiLCJpYXQiOjE2NDgzNjQwMDYsImV4cCI6MTY0ODM2NDA4MSwiYXVkIjoiNjIyMzg5YzZjYmJmYWYwN2JmYTJjMWI4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.f57-8rYSspC2jS0Zo52T766KXcybgxpIk6IBrQw7yWs; Max-Age=75; Path=/; Expires=Sun, 27 Mar 2022 06:54:41 GMT; HttpOnly
 Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVhZDE3Mzk2NWY3Y2I4NDRkZDRiMjgiLCJpYXQiOjE2NDQzNDc0MDksImV4cCI6MTY0NDM0ODMwOSwiYXVkIjoiNjFlYWQxNzM5NjVmN2NiODQ0ZGQ0YjI4IiwiaXNzIjoiZmFybWljby52ZXJjZWwuY29tIn0.iHijsdEYaadpILMBAUdrYbkEFOrKGYnRn8-yGbYteWI; Max-Age=900; Domain=127.0.0.1; Path=/; Expires=Tue, 08 Feb 2022 19:25:09 GMT; HttpOnly
 
 # 1. Auth
@@ -11,15 +11,15 @@ Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVhZD
 POST http://localhost:8000/auth/login
 Content-Type: application/json
 
-# {
-# 	"email":"saurabh@gmail.com",
-# 	"password":"123456"
-# }
-
 {
-	"email":"mytest@gmail.com",
+	"email":"saurabh@gmail.com",
 	"password":"123456"
 }
+
+# {
+# 	"email":"mytest@gmail.com",
+# 	"password":"123456"
+# }
 
 ###
 POST http://localhost:8000/auth/register
@@ -44,13 +44,13 @@ Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVhZD
 # 2. User
 ###
 GET http://localhost:8000/user/me
-# Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyNzU2MTQ4MjEwMjJhNTczMmMxZTYiLCJpYXQiOjE2NDY0OTIyMzYsImV4cCI6MTY0NjQ5MjMxMSwiYXVkIjoiNjIyMjc1NjE0ODIxMDIyYTU3MzJjMWU2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.PV5HRAbIDs6CdS6Bpp2KUxyZO-eRRYLzjxxSlb-GDyo; Max-Age=75; Path=/; Expires=Sat, 05 Mar 2022 14:58:31 GMT; HttpOnly
-Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyNzU2MTQ4MjEwMjJhNTczMmMxZTYiLCJpYXQiOjE2NDY0OTIyMzYsImV4cCI6MTY0NjQ5MjMxMSwiYXVkIjoiNjIyMjc1NjE0ODIxMDIyYTU3MzJjMWU2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.PV5HRAbIDs6CdS6Bpp2KUxyZO-eRRYLzjxxSlb-GDyo; Max-Age=75; Path=/; Expires=Sat, 05 Mar 2022 14:58:31 GMT; HttpOnly
+# Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIzODljNmNiYmZhZjA3YmZhMmMxYjgiLCJpYXQiOjE2NDgzNjQwMDYsImV4cCI6MTY0ODM2NDA4MSwiYXVkIjoiNjIyMzg5YzZjYmJmYWYwN2JmYTJjMWI4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.f57-8rYSspC2jS0Zo52T766KXcybgxpIk6IBrQw7yWs; Max-Age=75; Path=/; Expires=Sun, 27 Mar 2022 06:54:41 GMT; HttpOnly
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIzODljNmNiYmZhZjA3YmZhMmMxYjgiLCJpYXQiOjE2NDgzNjQwMDYsImV4cCI6MTY0ODM2NDA4MSwiYXVkIjoiNjIyMzg5YzZjYmJmYWYwN2JmYTJjMWI4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.f57-8rYSspC2jS0Zo52T766KXcybgxpIk6IBrQw7yWs; Max-Age=75; Path=/; Expires=Sun, 27 Mar 2022 06:54:41 GMT; HttpOnly
 
 ###
 PUT http://localhost:8000/user/update-profile
-# Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyNzU2MTQ4MjEwMjJhNTczMmMxZTYiLCJpYXQiOjE2NDY0OTIyMzYsImV4cCI6MTY0NjQ5MjMxMSwiYXVkIjoiNjIyMjc1NjE0ODIxMDIyYTU3MzJjMWU2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.PV5HRAbIDs6CdS6Bpp2KUxyZO-eRRYLzjxxSlb-GDyo; Max-Age=75; Path=/; Expires=Sat, 05 Mar 2022 14:58:31 GMT; HttpOnly
-Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyNzU2MTQ4MjEwMjJhNTczMmMxZTYiLCJpYXQiOjE2NDY0OTIyMzYsImV4cCI6MTY0NjQ5MjMxMSwiYXVkIjoiNjIyMjc1NjE0ODIxMDIyYTU3MzJjMWU2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.PV5HRAbIDs6CdS6Bpp2KUxyZO-eRRYLzjxxSlb-GDyo; Max-Age=75; Path=/; Expires=Sat, 05 Mar 2022 14:58:31 GMT; HttpOnly
+# Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIzODljNmNiYmZhZjA3YmZhMmMxYjgiLCJpYXQiOjE2NDgzNjQwMDYsImV4cCI6MTY0ODM2NDA4MSwiYXVkIjoiNjIyMzg5YzZjYmJmYWYwN2JmYTJjMWI4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.f57-8rYSspC2jS0Zo52T766KXcybgxpIk6IBrQw7yWs; Max-Age=75; Path=/; Expires=Sun, 27 Mar 2022 06:54:41 GMT; HttpOnly
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIzODljNmNiYmZhZjA3YmZhMmMxYjgiLCJpYXQiOjE2NDgzNjQwMDYsImV4cCI6MTY0ODM2NDA4MSwiYXVkIjoiNjIyMzg5YzZjYmJmYWYwN2JmYTJjMWI4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.f57-8rYSspC2jS0Zo52T766KXcybgxpIk6IBrQw7yWs; Max-Age=75; Path=/; Expires=Sun, 27 Mar 2022 06:54:41 GMT; HttpOnly
 Content-Type: application/json
 
 {
@@ -62,19 +62,23 @@ Content-Type: application/json
 }
 
 
-###
+### Get a user
+GET http://localhost:8000/user/6224a4b84cdbf0d60ca019bd
+
+### Check if username taken
 GET http://localhost:8000/user/username?value=saurabh
+
 
 # Blogs
 ###
 POST http://localhost:8000/blogs/
-Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyNzU2MTQ4MjEwMjJhNTczMmMxZTYiLCJpYXQiOjE2NDY0OTIyMzYsImV4cCI6MTY0NjQ5MjMxMSwiYXVkIjoiNjIyMjc1NjE0ODIxMDIyYTU3MzJjMWU2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.PV5HRAbIDs6CdS6Bpp2KUxyZO-eRRYLzjxxSlb-GDyo; Max-Age=75; Path=/; Expires=Sat, 05 Mar 2022 14:58:31 GMT; HttpOnly
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIzODljNmNiYmZhZjA3YmZhMmMxYjgiLCJpYXQiOjE2NDgzNjQwMDYsImV4cCI6MTY0ODM2NDA4MSwiYXVkIjoiNjIyMzg5YzZjYmJmYWYwN2JmYTJjMWI4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.f57-8rYSspC2jS0Zo52T766KXcybgxpIk6IBrQw7yWs; Max-Age=75; Path=/; Expires=Sun, 27 Mar 2022 06:54:41 GMT; HttpOnly
 Content-Type: application/json
 
 {
 	"locale": "mr",
 	"title": "Yadoon ki barat Teri 2",
-	//"subtitle": "annuum L right now!annuum L right now! annuum L right now!annuum L right now!annuum L right now!  annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!Check your Capsicum annuum L right now!",
+	"subtitle": "annuum L right now!annuum L right now! annuum L right now!annuum L right now!annuum L right now!  annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!Check your Capsicum annuum L right now!",
 	"body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"  
 }
 
@@ -83,32 +87,48 @@ GET http://localhost:8000/blogs?page=&limit=&sortBy=readTime&order=asc
 
 ###
 # GET http://localhost:8000/blogs/6202d12dd402b08ec7a04e96
-GET http://localhost:8000/blogs/slug
+GET http://localhost:8000/blogs/slug/yadoon-ki-barat
+Content-Type: application/json
+ 
+###
+PUT http://localhost:8000/blogs/6202d12dd402b08ec7a04e96
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIzODljNmNiYmZhZjA3YmZhMmMxYjgiLCJpYXQiOjE2NDgzNjQwMDYsImV4cCI6MTY0ODM2NDA4MSwiYXVkIjoiNjIyMzg5YzZjYmJmYWYwN2JmYTJjMWI4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.f57-8rYSspC2jS0Zo52T766KXcybgxpIk6IBrQw7yWs; Max-Age=75; Path=/; Expires=Sun, 27 Mar 2022 06:54:41 GMT; HttpOnly
 Content-Type: application/json
 
 {
-	"slug": "yadoon-ki-barat"
-}
+	"locale": "mr",
+	"title": "Yadoon ki barat Teri 2",
+	"subtitle": "annuum L right now!annuum L right now! annuum L right now!annuum L right now!annuum L right now!  annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!annuum L right now!Check your Capsicum annuum L right now!",
+	"body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"  
+} 
 
 ###
 GET http://localhost:8000/blogs/search?text=Yadoon
 
 ###
-PUT http://localhost:8000/blogs/vote/6202d12dd402b08ec7a04e96
-Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyNzU2MTQ4MjEwMjJhNTczMmMxZTYiLCJpYXQiOjE2NDY0OTIyMzYsImV4cCI6MTY0NjQ5MjMxMSwiYXVkIjoiNjIyMjc1NjE0ODIxMDIyYTU3MzJjMWU2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.PV5HRAbIDs6CdS6Bpp2KUxyZO-eRRYLzjxxSlb-GDyo; Max-Age=75; Path=/; Expires=Sat, 05 Mar 2022 14:58:31 GMT; HttpOnly
+GET http://localhost:8000/blogs/user
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIzODljNmNiYmZhZjA3YmZhMmMxYjgiLCJpYXQiOjE2NDgzNjQwMDYsImV4cCI6MTY0ODM2NDA4MSwiYXVkIjoiNjIyMzg5YzZjYmJmYWYwN2JmYTJjMWI4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.f57-8rYSspC2jS0Zo52T766KXcybgxpIk6IBrQw7yWs; Max-Age=75; Path=/; Expires=Sun, 27 Mar 2022 06:54:41 GMT; HttpOnly
 
 ###
-PUT http://localhost:8000/blogs/comment/6202d12dd402b08ec7a04e96
-Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyNzU2MTQ4MjEwMjJhNTczMmMxZTYiLCJpYXQiOjE2NDY0OTIyMzYsImV4cCI6MTY0NjQ5MjMxMSwiYXVkIjoiNjIyMjc1NjE0ODIxMDIyYTU3MzJjMWU2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.PV5HRAbIDs6CdS6Bpp2KUxyZO-eRRYLzjxxSlb-GDyo; Max-Age=75; Path=/; Expires=Sat, 05 Mar 2022 14:58:31 GMT; HttpOnly
+PUT http://localhost:8000/blogs/vote/6202d12dd402b08ec7a04e96
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIzODljNmNiYmZhZjA3YmZhMmMxYjgiLCJpYXQiOjE2NDgzNjQwMDYsImV4cCI6MTY0ODM2NDA4MSwiYXVkIjoiNjIyMzg5YzZjYmJmYWYwN2JmYTJjMWI4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.f57-8rYSspC2jS0Zo52T766KXcybgxpIk6IBrQw7yWs; Max-Age=75; Path=/; Expires=Sun, 27 Mar 2022 06:54:41 GMT; HttpOnly
+
+###
+PUT http://localhost:8000/blogs/comment/6235f14ad1bd85953902a962
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIzODljNmNiYmZhZjA3YmZhMmMxYjgiLCJpYXQiOjE2NDgzNjQwMDYsImV4cCI6MTY0ODM2NDA4MSwiYXVkIjoiNjIyMzg5YzZjYmJmYWYwN2JmYTJjMWI4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.f57-8rYSspC2jS0Zo52T766KXcybgxpIk6IBrQw7yWs; Max-Age=75; Path=/; Expires=Sun, 27 Mar 2022 06:54:41 GMT; HttpOnly
 Content-Type: application/json
 
 { 
-	"body": "Kdkk mast re bhava" 
+	"body": "Amazing post" 
 }
+
+### Delete a comment {blogId}/{commentId}
+DELETE http://localhost:8000/blogs/comment/6235f14ad1bd85953902a962/624157c9d2ba6ac879d81125
+
 
 ###
 DELETE  http://localhost:8000/blogs/6202d12dd402b08ec7a04e96
-Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyNzU2MTQ4MjEwMjJhNTczMmMxZTYiLCJpYXQiOjE2NDY0OTIyMzYsImV4cCI6MTY0NjQ5MjMxMSwiYXVkIjoiNjIyMjc1NjE0ODIxMDIyYTU3MzJjMWU2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.PV5HRAbIDs6CdS6Bpp2KUxyZO-eRRYLzjxxSlb-GDyo; Max-Age=75; Path=/; Expires=Sat, 05 Mar 2022 14:58:31 GMT; HttpOnly 
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIzODljNmNiYmZhZjA3YmZhMmMxYjgiLCJpYXQiOjE2NDgzNjQwMDYsImV4cCI6MTY0ODM2NDA4MSwiYXVkIjoiNjIyMzg5YzZjYmJmYWYwN2JmYTJjMWI4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.f57-8rYSspC2jS0Zo52T766KXcybgxpIk6IBrQw7yWs; Max-Age=75; Path=/; Expires=Sun, 27 Mar 2022 06:54:41 GMT; HttpOnly 
 # test-user
 # Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVkNzQwM2M5NDUwYmZjN2Q0MDI0ZDgiLCJpYXQiOjE2NDQzNDg5MTcsImV4cCI6MTY0NDM1NjQxNywiYXVkIjoiNjFlZDc0MDNjOTQ1MGJmYzdkNDAyNGQ4IiwiaXNzIjoiZmFybWljby52ZXJjZWwuY29tIn0.FUFucsarFqMxYF4QZWiDsS6c3N2I932xWcFd_W5vqt4; Max-Age=7500; Domain=127.0.0.1; Path=/; Expires=Tue, 08 Feb 2022 21:40:17 GMT; HttpOnly
 
@@ -116,7 +136,7 @@ Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyNzU
 ###
 # Result
 POST http://localhost:8000/results/
-Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIyNzU2MTQ4MjEwMjJhNTczMmMxZTYiLCJpYXQiOjE2NDY0OTIyMzYsImV4cCI6MTY0NjQ5MjMxMSwiYXVkIjoiNjIyMjc1NjE0ODIxMDIyYTU3MzJjMWU2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.PV5HRAbIDs6CdS6Bpp2KUxyZO-eRRYLzjxxSlb-GDyo; Max-Age=75; Path=/; Expires=Sat, 05 Mar 2022 14:58:31 GMT; HttpOnly
+Cookie: accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjIzODljNmNiYmZhZjA3YmZhMmMxYjgiLCJpYXQiOjE2NDgzNjQwMDYsImV4cCI6MTY0ODM2NDA4MSwiYXVkIjoiNjIyMzg5YzZjYmJmYWYwN2JmYTJjMWI4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.f57-8rYSspC2jS0Zo52T766KXcybgxpIk6IBrQw7yWs; Max-Age=75; Path=/; Expires=Sun, 27 Mar 2022 06:54:41 GMT; HttpOnly
 Content-Type: application/json
 
 # {
@@ -138,7 +158,7 @@ GET http://localhost:8000/results/
 Cookie:  accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVkNzQwM2M5NDUwYmZjN2Q0MDI0ZDgiLCJpYXQiOjE2NDY0MjQ2MDgsImV4cCI6MTY0NjQyNDY4MywiYXVkIjoiNjFlZDc0MDNjOTQ1MGJmYzdkNDAyNGQ4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.7gqXb36gYxadHWtuNArYW_T9q1EKvhvY-NwIV-cTRqQ; Max-Age=75; Path=/; Expires=Fri, 04 Mar 2022 20:11:23 GMT; HttpOnly
 
 ###
-GET http://localhost:8000/results/6201685c3a00a8c7a31344e9
+GET http://localhost:8000/results/6239c37dcb501cb96ebdb08b
 Cookie:  accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWVkNzQwM2M5NDUwYmZjN2Q0MDI0ZDgiLCJpYXQiOjE2NDY0MjQ2MDgsImV4cCI6MTY0NjQyNDY4MywiYXVkIjoiNjFlZDc0MDNjOTQ1MGJmYzdkNDAyNGQ4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.7gqXb36gYxadHWtuNArYW_T9q1EKvhvY-NwIV-cTRqQ; Max-Age=75; Path=/; Expires=Fri, 04 Mar 2022 20:11:23 GMT; HttpOnly
 
 ###

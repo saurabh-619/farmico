@@ -1,10 +1,17 @@
+import useLocale from "@/hooks/useLocale";
 import * as editorIcons from "@/utils/assets";
+import { __isServer__ } from "@/utils/constants";
 import { Box } from "@chakra-ui/react";
-import { convertToRaw, EditorState } from "draft-js";
+import {
+  ContentState,
+  convertFromHTML,
+  convertToRaw,
+  EditorState,
+} from "draft-js";
 import draftToHtml from "draftjs-to-html";
 import dynamic from "next/dynamic";
 import React, { useState } from "react";
-import "../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import "../../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 const Editor = dynamic(
   // @ts-ignore
@@ -15,25 +22,53 @@ const Editor = dynamic(
 );
 
 interface ITextEditor {
+  content?: string;
   setContent: React.Dispatch<React.SetStateAction<string>>;
+  setBodyPreview: React.Dispatch<React.SetStateAction<string>>;
+  [x: string]: any;
 }
 
-const TextEditor: React.FC<ITextEditor> = ({ setContent }) => {
-  const [editorState, setEditorState] = useState(EditorState.createEmpty());
+const TextEditor: React.FC<ITextEditor> = ({
+  content,
+  setContent,
+  setBodyPreview,
+  ...props
+}) => {
+  const { t } = useLocale();
+
+  const [editorState, setEditorState] = useState(() => {
+    if (!content || __isServer__) return EditorState.createEmpty();
+
+    const blocksFromHTML = convertFromHTML(content);
+    const contentState = ContentState.createFromBlockArray(
+      blocksFromHTML.contentBlocks,
+      blocksFromHTML.entityMap
+    );
+
+    return EditorState.createWithContent(contentState);
+  });
 
   const onEditorStateChange = (state: EditorState) => {
     setEditorState(state);
+    setBodyPreview(
+      state
+        .getCurrentContent()
+        .getPlainText()
+        .replace(/(\r\n|\n|\r)/gm, " ")
+        .replace(/\s+/g, " ")
+        .trim()
+    );
 
     // @ts-ignore
     setContent(draftToHtml(convertToRaw(state.getCurrentContent())));
   };
 
   return (
-    <Box>
+    <Box {...props}>
       <Editor
         // @ts-ignore
         editorState={editorState}
-        placeholder="Write something useful ...."
+        placeholder={t.write_something_useful}
         wrapperClassName="wrapper-class"
         editorClassName="editor-class"
         toolbarClassName={"toolbar-class"}

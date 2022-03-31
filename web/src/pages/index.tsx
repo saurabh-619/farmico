@@ -1,25 +1,86 @@
-import { ISubtitleProps } from "@/utils/types";
+import { BLOG_LOCALE_TYPE, ISubtitleProps, LocaleType } from "@/utils/types";
+import { Box, Flex, Heading } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import type { NextPage } from "next";
-import { useRouter } from "next/router";
-import { getLocal } from "./../utils/helpers";
+import { useEffect, useState } from "react";
+import * as appHelpers from "@/utils/helpers";
 
 interface IHome {}
 
 const Home: NextPage<IHome> & ISubtitleProps = () => {
-  const { locale } = useRouter();
-  const t = getLocal(locale);
+  const [farmicoText, setFarmicoText] = useState<string>("farmico");
+
+  const toggle = () => {
+    if (farmicoText === "farmico") {
+      setFarmicoText("फार्मिको");
+    } else {
+      setFarmicoText("farmico");
+    }
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      toggle();
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [farmicoText]);
 
   return (
-    <div>
-      <h1
-        style={{
-          fontWeight: "bold",
-          fontSize: 50,
-        }}
+    <Box
+      pos="absolute"
+      top="0"
+      left="0"
+      zIndex={-1}
+      h="100vh"
+      w="100vw"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      overflow="hidden"
+      id="home"
+    >
+      <Flex
+        h="95%"
+        w="75%"
+        flexDir="column"
+        justifyContent="center"
+        alignItems="center"
       >
-        {t?.welcome}
-      </h1>
-    </div>
+        <Box
+          h="full"
+          w="full"
+          pos="absolute"
+          className="home-mesh"
+          zIndex={-1}
+        />
+        <Flex alignItems="center" justifyContent="flex-start" w="660px">
+          <h3
+            style={{
+              fontWeight: "bold",
+              fontSize: "3.5rem",
+            }}
+          >
+            welcome to the
+          </h3>
+          <motion.h4
+            key={farmicoText}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: [0, 0.3, 0.5, 0.7, 1], y: 0 }}
+            transition={{ duration: 0.45, ease: "easeOut" }}
+            className="home-brand-title"
+          >
+            {farmicoText}
+            <Heading as="small" color="black">
+              .
+            </Heading>
+          </motion.h4>
+        </Flex>
+        <Heading fontWeight="normal" fontSize="xl" mt="3">
+          a community driven AI tool for precision farming
+        </Heading>
+      </Flex>
+    </Box>
   );
 };
 

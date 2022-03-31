@@ -1,6 +1,7 @@
 import * as apiHelper from "@/api/api.helper";
 import useAppLoading from "@/hooks/useAppLoading";
 import useAppToast from "@/hooks/useAppToast";
+import useLocale from "@/hooks/useLocale";
 import useUser from "@/hooks/useUser";
 import { isTokenExpired, reLoginUserWithRefreshToken } from "@/utils/helpers";
 import { UserType } from "@/utils/types";
@@ -32,8 +33,8 @@ const withAuth = (WrappedComponent: NextPage<any>) => {
         userData = data.user;
       }
       setUser(userData);
-    } catch (error) {
-      localStorage.removeItem("accessToken");
+    } catch (error: any) {
+      localStorage?.removeItem("accessToken");
       console.log({ error: error.message });
     } finally {
       setAppLoading(false);
@@ -41,6 +42,8 @@ const withAuth = (WrappedComponent: NextPage<any>) => {
   };
 
   return (props: any) => {
+    const { t } = useLocale();
+
     const [verified, setVerified] = useState(false);
     const router = useRouter();
     const { user, setUser, isAuthenticated } = useUser();
@@ -50,11 +53,7 @@ const withAuth = (WrappedComponent: NextPage<any>) => {
     const checkIfLoggedIn = async () => {
       if (!(await isUserLoggedIn())) {
         router.replace("/login");
-        triggerToast(
-          "Unauthenticated request!",
-          "Please login again. Session expired",
-          "error"
-        );
+        triggerToast(t.unautheticated_request, t.please_login_again, "error");
       } else {
         if (!user) {
           setAppLoading(true);
@@ -72,7 +71,8 @@ const withAuth = (WrappedComponent: NextPage<any>) => {
       return <WrappedComponent {...props} />;
     } else {
       // logout();
-      return "not authenticated";
+      // not authenticated
+      return "";
     }
   };
 };

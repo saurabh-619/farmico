@@ -1,5 +1,5 @@
-import React from "react";
 import { Button, Spinner } from "@chakra-ui/react";
+import React from "react";
 
 interface IAppButtonProps {
   loading?: boolean;
@@ -11,6 +11,7 @@ interface IAppButtonProps {
   py?: string;
   px?: string;
   variant?: "solid" | "outline" | "ghost" | "link";
+  [x: string]: any;
 }
 
 const AppButton: React.FC<IAppButtonProps> = ({
@@ -19,7 +20,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
   onClick,
   width = "",
   variant = "solid",
-  btnColor = "",
+  btnColor = "brand.600",
   textColor = "white",
   py = "4",
   px = "3",
@@ -33,11 +34,12 @@ const AppButton: React.FC<IAppButtonProps> = ({
       w={width}
       isLoading={loading}
       borderRadius="4px"
-      className="action-btn"
       color={textColor}
       disabled={loading}
       variant={variant}
       onClick={onClick}
+      bg={btnColor}
+      _hover={{ opacity: 0.8 }}
       {...props}
     >
       {loading ? <Spinner color="white" /> : text}

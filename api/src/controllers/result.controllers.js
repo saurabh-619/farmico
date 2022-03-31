@@ -5,7 +5,7 @@ const { resultSchema } = require("../utils/validation.schema");
 exports.getResults = async (req, res, next) => {
   try {
     const results = await Result.find({ user: req.userId })
-      .populate("user", "_id name username email")
+      .populate("user", "_id name username email isAdmin")
       .sort({
         createdAt: "desc",
       });
@@ -18,12 +18,11 @@ exports.getResults = async (req, res, next) => {
 
 exports.getResult = async (req, res, next) => {
   const { id } = req.params;
-  console.log({ id });
 
   try {
-    const result = await Result.findOne({ _id: id, user: req.userId }).populate(
+    const result = await Result.findById(id).populate(
       "user",
-      "_id name username email"
+      "_id name username email isAdmin"
     );
     res.status(200).json({ ok: true, result });
   } catch (error) {
@@ -49,8 +48,8 @@ exports.postResult = async (req, res, next) => {
       ...(isDiseaseModel && { isUnhealthy }),
     });
 
-    await result.save();
-    res.status(200).json({ ok: true });
+    const savedResult = await result.save();
+    res.status(200).json({ ok: true, savedResult });
   } catch (error) {
     console.log({ error });
     next(error);
@@ -66,7 +65,7 @@ exports.deleteResult = async (req, res, next) => {
       throw new createError.NotFound("Result couldn't find");
     }
 
-    await Result.deleteOne({ id });
+    await Result.deleteOne({ _id: id });
     res.status(200).json({ ok: true });
   } catch (error) {
     console.log({ error: error.message });

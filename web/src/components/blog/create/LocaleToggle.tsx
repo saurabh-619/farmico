@@ -1,12 +1,14 @@
+import * as appHelpers from "@/utils/helpers";
 import { BLOG_LOCALE_TYPE } from "@/utils/types";
 import { Box, Heading } from "@chakra-ui/react";
-import React, { useState } from "react";
-import * as appHelpers from "@/utils/helpers";
+import React from "react";
 
-const LocaleToggle = () => {
-  const [locale, setLocale] = useState<BLOG_LOCALE_TYPE>(
-    BLOG_LOCALE_TYPE.ENGLISH
-  );
+interface ILocaleToggleProps {
+  locale: BLOG_LOCALE_TYPE;
+  setLocale: React.Dispatch<React.SetStateAction<BLOG_LOCALE_TYPE>>;
+}
+
+const LocaleToggle: React.FC<ILocaleToggleProps> = ({ locale, setLocale }) => {
   const toggle = () => {
     if (locale === BLOG_LOCALE_TYPE.ENGLISH) {
       setLocale(BLOG_LOCALE_TYPE.MARATHI);

@@ -1,6 +1,7 @@
 import * as apiHelper from "@/api/api.helper";
 import AppFormButton from "@/components/form/AppFormButton";
 import useAppToast from "@/hooks/useAppToast";
+import useLocale from "@/hooks/useLocale";
 import useUser from "@/hooks/useUser";
 import { ISubtitleProps, LoginDataType } from "@/utils/types";
 import * as validationSchema from "@/utils/validation.schema";
@@ -25,6 +26,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const Login: NextPage & ISubtitleProps = () => {
+  const { t } = useLocale();
   const { setIsAuthenticated } = useUser();
   const router = useRouter();
   const { triggerToast, triggerErrorToast } = useAppToast();
@@ -53,11 +55,11 @@ const Login: NextPage & ISubtitleProps = () => {
 
       localStorage.setItem("accessToken", response.data.accessToken);
       setIsAuthenticated(true);
-      triggerToast("Success", "Welcome back to farmico");
+      triggerToast(t.success, t.welcome_back_to_the_farmico);
       router.replace("/blogs");
     } catch (error: any) {
       console.log({ error });
-      triggerErrorToast("Login error", error);
+      triggerErrorToast(t.login_error, error);
     } finally {
       setLoading(false);
     }
@@ -66,7 +68,7 @@ const Login: NextPage & ISubtitleProps = () => {
   return (
     <Flex width="full" alignItems="center" minHeight="80vh" direction="column">
       <Box textAlign="center" mt="16">
-        <Heading color="text">Login</Heading>
+        <Heading color="text">{t.login}</Heading>
       </Box>
       <Box
         py="9"
@@ -81,7 +83,7 @@ const Login: NextPage & ISubtitleProps = () => {
       >
         <form onSubmit={handleSubmit(handleLogin)}>
           <FormControl isInvalid={errors.email !== undefined} my="6">
-            <FormLabel htmlFor="email">email</FormLabel>
+            <FormLabel htmlFor="email">{t.email}</FormLabel>
             <Input
               py="4"
               px="3"
@@ -97,7 +99,7 @@ const Login: NextPage & ISubtitleProps = () => {
             )}
           </FormControl>
           <FormControl isInvalid={errors.password !== undefined} my="6">
-            <FormLabel htmlFor="password">password</FormLabel>
+            <FormLabel htmlFor="password">{t.password}</FormLabel>
             <InputGroup>
               <Input
                 py="4"
@@ -121,11 +123,11 @@ const Login: NextPage & ISubtitleProps = () => {
               <FormErrorMessage>{errors.password?.message}</FormErrorMessage>
             )}
           </FormControl>
-          <AppFormButton loading={loading} text="login" />
+          <AppFormButton loading={loading} text={t.login} />
         </form>
       </Box>
       <Heading as="h5" fontSize="sm" fontWeight="normal" mt="5">
-        Don't have an account?{" "}
+        {t.dont_have_an_account}{" "}
         <NextLink href="/register" passHref>
           <Link>
             <Heading
@@ -134,7 +136,7 @@ const Login: NextPage & ISubtitleProps = () => {
               fontSize="sm"
               fontWeight="semibold"
             >
-              create an account
+              {t.create_an_account}
             </Heading>
           </Link>
         </NextLink>

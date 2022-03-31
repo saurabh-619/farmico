@@ -1,12 +1,5 @@
 import { initializeApp } from "firebase/app";
-import {
-  deleteObject,
-  getStorage,
-  listAll,
-  ref,
-  uploadBytesResumable,
-  UploadTask,
-} from "firebase/storage";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAx9SPkf2w_mmkSG-lXHxaTZx2UBwB87fs",

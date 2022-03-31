@@ -20,9 +20,32 @@ axiosCommunity.interceptors.response.use((config) => {
 
 export const axiosModel = axios.create({
   baseURL: process.env.NEXT_PUBLIC_MODEL_API_BASE_URL,
+  withCredentials: true,
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
 });
 
 export const handleRequest = async <T>(
+  apiHandler: (body?: T) => Promise<AxiosResponse>,
+  body?: T
+): Promise<AxiosResponse> => {
+  try {
+    return !body ? await apiHandler() : await apiHandler(body);
+  } catch (error: any) {
+    console.log({ refError: error });
+    if (error?.response?.data?.hasAccessTokenExpired) {
+      // refresh the token and try calling helper again
+      console.log("Refreshing new access token...");
+      await reLoginUserWithRefreshToken();
+      return !body ? await apiHandler() : await apiHandler(body);
+    }
+    throw error;
+  }
+};
+
+export const handleRequestServer = async <T>(
   apiHandler: (body?: T) => Promise<AxiosResponse>,
   body?: T
 ): Promise<AxiosResponse> => {

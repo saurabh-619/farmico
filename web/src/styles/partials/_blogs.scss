@@ -1,0 +1,53 @@
+#blogCard {
+  & .blogHtmlPreview {
+    margin-top: 2rem;
+  }
+}
+
+#blog {
+  & .blogHtml {
+    line-height: 1.9;
+
+    & img {
+      margin: 4rem auto;
+      max-height: 300px;
+      width: auto;
+      object-fit: cover;
+    }
+
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6,
+    & p,
+    & p span,
+    & span {
+      background-color: transparent !important;
+      font-family: inherit !important;
+      font-weight: normal;
+    }
+
+    & h2,
+    & h3,
+    & p span strong {
+      display: block;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    & h4,
+    & h5,
+    & h6 {
+      margin-top: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    & ul,
+    & ol {
+      margin: 1rem 0;
+      padding: 0 2rem;
+    }
+  }
+}

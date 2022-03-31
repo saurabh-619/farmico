@@ -82,6 +82,7 @@ exports.register = async (req, res, next) => {
 exports.refreshToken = async (req, res, next) => {
   try {
     let { refreshToken } = req.cookies;
+
     if (!refreshToken)
       throw new createError.BadRequest("Refresh token not provided");
 
