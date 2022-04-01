@@ -36,6 +36,7 @@ const AppAvatar: React.FC<IAppAvatar> = ({
         className="avatar"
         objectFit="cover"
         priority={true}
+        alt="app avatar"
         {...props}
       />
       {isAdmin && (

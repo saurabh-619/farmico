@@ -130,7 +130,7 @@ const SearchModal: React.FC<ISearchModalProps> = ({ isOpen, onClose }: any) => {
             {results?.length !== 0 && (
               <Box w="full">
                 {results.map((result: BlogType) => (
-                  <SearchResultCard result={result} />
+                  <SearchResultCard key={result._id} result={result} />
                 ))}
               </Box>
             )}

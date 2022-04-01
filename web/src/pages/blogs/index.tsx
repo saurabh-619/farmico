@@ -50,6 +50,15 @@ const Blogs: NextPage<IBlogs> & ISubtitleProps = ({
 
   const allItems = useMemo(() => data?.pages.flatMap((page) => page), [data]);
 
+  useEffect(() => {
+    console.log("Fetching");
+    if (inView && hasNextPage) {
+      console.log("Start Fetching");
+      setPageNumber((p) => p + 1);
+      fetchNextPage();
+    }
+  }, [inView]);
+
   if (isLoading) {
     return <SomethingWentWrong h="70vh" subtitle={t.loading} />;
   }
@@ -59,15 +68,6 @@ const Blogs: NextPage<IBlogs> & ISubtitleProps = ({
       <SomethingWentWrong h="70vh" subtitle={t.blogs_couldnt_be_fetched} />
     );
   }
-
-  useEffect(() => {
-    console.log("Fetching");
-    if (inView && hasNextPage) {
-      console.log("Start Fetching");
-      setPageNumber((p) => p + 1);
-      fetchNextPage();
-    }
-  }, [inView]);
 
   return (
     <Box pt="8" minH="75vh">
