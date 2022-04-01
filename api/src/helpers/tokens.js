@@ -95,14 +95,14 @@ exports.verifyRefreshToken = async (refreshToken) => {
 
 exports.setCookies = async (res, accessToken, refreshToken) => {
   res.cookie("accessToken", accessToken, {
-    // secure: !__dev__,
-    secure: false,
+    secure: !__dev__,
+    sameSite: "none",
     httpOnly: true,
     maxAge: ACCESS_TOKEN_EXPIRATION_COOKIE,
   });
   res.cookie("refreshToken", refreshToken, {
-    // secure: !__dev__,
-    secure: false,
+    secure: !__dev__,
+    sameSite: "none",
     httpOnly: true,
     maxAge: REFRESH_TOKEN_EXPIRATION_REDIS_AND_COOKIE,
   });
@@ -110,14 +110,14 @@ exports.setCookies = async (res, accessToken, refreshToken) => {
 
 exports.destroyCookies = async (res) => {
   res.cookie("accessToken", "", {
-    // secure: !__dev__,
-    secure: false,
+    secure: !__dev__,
+    sameSite: "none",
     httpOnly: true,
     maxAge: 0,
   });
   res.cookie("refreshToken", "", {
-    // secure: !__dev__,
-    secure: false,
+    secure: !__dev__,
+    sameSite: "none",
     httpOnly: true,
     maxAge: 0,
   });
