@@ -5,7 +5,7 @@ interface IAppLink extends LinkProps {
   text?: string;
 }
 
-export default React.forwardRef<LinkProps, IAppLink>(
+const AppLink = React.forwardRef<LinkProps, IAppLink>(
   ({ text, ...props }, ref) => (
     <Link
       _hover={{
@@ -23,4 +23,7 @@ export default React.forwardRef<LinkProps, IAppLink>(
 // const AppLink = React.forwardRef(props: IAppLink, ref) => {
 //   return <Link>{props.text}</Link>
 // }
-// export default AppLink;
+
+AppLink.displayName = "AppLink";
+
+export default AppLink;

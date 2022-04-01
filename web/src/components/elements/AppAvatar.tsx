@@ -28,7 +28,7 @@ const AppAvatar: React.FC<IAppAvatar> = ({
   ...props
 }) => {
   return (
-    <Box pos="relative">
+    <Box pos="relative" display={"flex"}>
       <Image
         src={src}
         height={size}

@@ -47,7 +47,7 @@ const CommentCard: React.FC<ICommentCardProps> = ({
               iconSize="8px"
               borderSize="1px"
               right="-3px"
-              bottom="4px"
+              bottom="0px"
             />
             <Heading
               as="h4"

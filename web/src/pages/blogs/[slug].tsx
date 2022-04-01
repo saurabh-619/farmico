@@ -167,7 +167,7 @@ const Blog: NextPage<IBlogProps> & ISubtitleProps = ({ blogData }) => {
                 size="40"
                 isAdmin={blog.author.isAdmin}
                 right="-4px"
-                bottom="6px"
+                bottom="0px"
               />
               <Heading
                 as="h4"

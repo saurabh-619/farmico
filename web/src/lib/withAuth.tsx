@@ -77,4 +77,6 @@ const withAuth = (WrappedComponent: NextPage<any>) => {
   };
 };
 
+withAuth.displayName = "withAuth";
+
 export default withAuth;

@@ -42,7 +42,7 @@ const BlogCard: React.FC<IBlogCard> = ({ blog }) => {
               size="45px"
               isAdmin={blog.author.isAdmin}
               right="-4px"
-              bottom="6px"
+              bottom="0px"
             />
             <Flex mx="3" direction="column">
               <Heading
