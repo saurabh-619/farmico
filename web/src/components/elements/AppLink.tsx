@@ -5,12 +5,13 @@ interface IAppLink extends LinkProps {
   text?: string;
 }
 
-const AppLink = React.forwardRef<LinkProps, IAppLink>(
+export default React.forwardRef<LinkProps, IAppLink>(
   ({ text, ...props }, ref) => (
     <Link
       _hover={{
         textDecorationLine: "none",
       }}
+      // @ts-ignore
       ref={ref}
       {...props}
     >
@@ -22,4 +23,4 @@ const AppLink = React.forwardRef<LinkProps, IAppLink>(
 // const AppLink = React.forwardRef(props: IAppLink, ref) => {
 //   return <Link>{props.text}</Link>
 // }
-export default AppLink;
+// export default AppLink;

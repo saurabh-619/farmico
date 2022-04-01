@@ -41,7 +41,7 @@ const withAuth = (WrappedComponent: NextPage<any>) => {
     }
   };
 
-  return (props: any) => {
+  return function (props: any) {
     const { t } = useLocale();
 
     const [verified, setVerified] = useState(false);
