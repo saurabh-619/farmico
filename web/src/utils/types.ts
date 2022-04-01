@@ -99,7 +99,8 @@ export type DeleteCommentData = {
 };
 
 export type ISubtitleProps = {
-  subtitle: string;
+  subtitle?: string;
+  showLayout?: boolean;
 };
 
 export enum CURRENT_PROFILE_TYPE {

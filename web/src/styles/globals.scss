@@ -182,3 +182,25 @@ select.locale-select {
     }
   }
 }
+
+.app-loader {
+display: flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:auto;
+  height:100vh;
+
+
+  & img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+  }
+
+  & h3 {
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    font-weight: medium;
+  }
+}

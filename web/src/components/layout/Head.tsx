@@ -24,6 +24,7 @@ export const Head: React.FC<IHead> = ({ subtitle }) => {
 
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
+      <link rel="icon" type="image/x-icon" href="/logo-1.svg" />
 
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />

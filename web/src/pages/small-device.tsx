@@ -1,8 +1,10 @@
 import { Flex, Heading } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { NextPage } from "next";
+import { ISubtitleProps } from "@/utils/types";
 
-const SmallDevice: React.FC = () => {
+const SmallDevice: NextPage & ISubtitleProps = () => {
   const [currLocale, setCurrLocale] = useState<string>("en");
   const [topText, setTopText] = useState<string>(
     "Hey there! farmico doesn't work on mobile devices yet 😢"
@@ -12,11 +14,11 @@ const SmallDevice: React.FC = () => {
   const toggle = () => {
     if (currLocale === "en") {
       setCurrLocale("mr");
-      setTopText("अहो! farmico अद्याप मोबाइल डिव्हाइसवर काम करत नाही 😢");
+      setTopText("अहो! फार्मिको अद्याप मोबाइल डिव्हाइसवर काम करत नाही 😢");
       setBottomText("~ टीम फार्मिको");
     } else if (currLocale === "mr") {
       setCurrLocale("hi");
-      setTopText("फार्मिको अभी तक मोबाइल उपकरणों पर काम नहीं करता है");
+      setTopText("फार्मिको अभी तक मोबाइल उपकरणों पर काम नहीं करता है 😢");
       setBottomText("~ टीम फ़ार्मिको");
     } else {
       setCurrLocale("en");
@@ -71,5 +73,7 @@ const SmallDevice: React.FC = () => {
     </Flex>
   );
 };
+
+SmallDevice.showLayout = false;
 
 export default SmallDevice;

@@ -3,12 +3,16 @@ const createError = require("http-errors");
 const { redisClient } = require("./redis");
 const { __dev__ } = require("../utils/constants");
 
-const ACCESS_TOKEN_EXPIRATION = 5 * 0.25 * 60; // sec (JWT)
-const ACCESS_TOKEN_EXPIRATION_COOKIE = 5 * 0.25 * 1000 * 60; //mili-sec
+const ACCESS_TOKEN_EXPIRATION = __dev__ ? 5 * 0.25 * 60 : 30 * 60; // sec (JWT)
+const ACCESS_TOKEN_EXPIRATION_COOKIE = __dev__
+  ? 5 * 0.25 * 1000 * 60
+  : 30 * 1000 * 60; //mili-sec
 // const ACCESS_TOKEN_EXPIRATION = 5 * 25 * 60; // sec (JWT)
 // const ACCESS_TOKEN_EXPIRATION_COOKIE = 5 * 25 * 1000 * 60; //mili-sec
-const REFRESH_TOKEN_EXPIRATION = 15 * 60; // sec (JWT)
-const REFRESH_TOKEN_EXPIRATION_REDIS_AND_COOKIE = 15 * 60 * 1000; //mili-sec
+const REFRESH_TOKEN_EXPIRATION = __dev__ ? 15 * 60 : 24 * 60 * 60; // sec (JWT)
+const REFRESH_TOKEN_EXPIRATION_REDIS_AND_COOKIE = __dev__
+  ? 15 * 60 * 1000
+  : 24 * 60 * 60 * 1000; //mili-sec
 
 exports.signAccessToken = async (userId) => {
   const payload = {
