@@ -41,7 +41,7 @@ const withAuth = (WrappedComponent: NextPage<any>) => {
     }
   };
 
-  return function (props: any) {
+  return function WithAuth(props: any) {
     const { t } = useLocale();
 
     const [verified, setVerified] = useState(false);
@@ -76,7 +76,5 @@ const withAuth = (WrappedComponent: NextPage<any>) => {
     }
   };
 };
-
-withAuth.displayName = "withAuth";
 
 export default withAuth;
