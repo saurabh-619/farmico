@@ -17,6 +17,7 @@ const AppBadge: React.FC<IAppBadgeProps> = ({
     <Box
       h="17px"
       w="auto"
+      py={1}
       minW="42px"
       display="flex"
       justifyContent="center"

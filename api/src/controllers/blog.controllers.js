@@ -254,7 +254,11 @@ const getReadTime = (body) => {
   return Math.ceil(words / WPM);
 };
 
-const getSlug = (title) => {
+const getSlug = (title, locale = "en") => {
+  if (locale !== "en") {
+    return title.replace(/\s+/g, "-");
+  }
+
   return title
     .toLowerCase()
     .replace(/^-+/g, "")
@@ -268,7 +272,7 @@ exports.createABlog = async (req, res, next) => {
     const { locale, title, subtitle, body, bodyPreview } =
       await blogSchema.validateAsync(req.body);
 
-    const slug = getSlug(title);
+    const slug = getSlug(title, locale);
 
     const readTime = getReadTime(body);
 

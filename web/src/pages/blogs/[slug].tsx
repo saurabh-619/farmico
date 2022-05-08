@@ -255,6 +255,7 @@ const Blog: NextPage<IBlogProps> & ISubtitleProps = ({ blogData }) => {
           {blog.comments.map((comment: CommentType) => (
             <CommentCard
               key={comment._id}
+              blogAuthorId={blog.author._id.toString()}
               comment={comment}
               deleteAComment={deleteAComment}
             />

@@ -12,15 +12,17 @@ import React from "react";
 import { FiTrash2 } from "react-icons/fi";
 
 interface ICommentCardProps {
+  blogAuthorId:string,
   comment: CommentType;
   deleteAComment: (commentId: string) => void;
 }
 
 const CommentCard: React.FC<ICommentCardProps> = ({
+  blogAuthorId,
   comment,
   deleteAComment,
 }) => {
-  const { locale } = useLocale();
+  const { locale, t } = useLocale();
   const { user } = useUser();
   const { isOpen, onClose, onOpen } = useDisclosure();
 
@@ -58,7 +60,7 @@ const CommentCard: React.FC<ICommentCardProps> = ({
             >
               {comment.user.name}
             </Heading>
-            {comment.user._id === user?._id && (
+            {blogAuthorId === user?._id && (
               <AppBadge text="author" bg="success.400" color="white" ml="3" />
             )}
           </Box>
@@ -82,6 +84,7 @@ const CommentCard: React.FC<ICommentCardProps> = ({
               isOpen={isOpen}
               onClose={onClose}
               onAccept={() => deleteAComment(comment._id)}
+              actionText={t.add_comment}
             />
           </Box>
         )}

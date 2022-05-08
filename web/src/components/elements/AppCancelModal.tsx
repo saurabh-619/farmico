@@ -15,14 +15,18 @@ interface IAppCancelModalProps {
   onClose: () => void;
   isOpen: boolean;
   onAccept: Function;
+  actionText?: string;
 }
 
 const AppCancelModal: React.FC<IAppCancelModalProps> = ({
   onClose,
   isOpen,
   onAccept,
+  actionText,
 }) => {
   const { t } = useLocale();
+
+  actionText = actionText ?? t.delete;
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} isCentered>
@@ -47,7 +51,7 @@ const AppCancelModal: React.FC<IAppCancelModalProps> = ({
             {t.cancel}
           </Button>
           <AppButton
-            text={t.delete}
+            text={actionText}
             width="80px"
             onClick={() => {
               onClose();

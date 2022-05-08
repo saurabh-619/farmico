@@ -40,7 +40,7 @@ const Info = () => {
         </Heading>
         <AppBadge text={t.admin} ml="3" />
       </Flex>
-      <Flex mt="6" w="65%" alignItems="center" justifyContent="space-between">
+      <Flex mt="6" w="70%" alignItems="center" justifyContent="space-between">
         <Box display="flex" alignItems="center" flexDirection="row" mx="2">
           <AtSignIcon fontSize="lg" mr="2" color="text.light" />
           <Heading as="h4" fontSize="md" fontWeight="normal" color="text.light">
