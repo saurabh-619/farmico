@@ -5,15 +5,16 @@ import useLocale from "@/hooks/useLocale";
 import AppHeading from "@/layout/AppHeading";
 import withAuth from "@/lib/withAuth";
 import * as appHelpers from "@/utils/helpers";
-import {
-  ISubtitleProps, ModelEnum, PostModelResult
-} from "@/utils/types";
+import { ISubtitleProps, ModelEnum, PostModelResult } from "@/utils/types";
 import { Box, Flex, Heading, Icon, Link } from "@chakra-ui/react";
 import { GetServerSideProps, NextPage } from "next";
 import Image from "next/image";
 import NextLink from "next/link";
 import {
-  FiActivity, FiCalendar, FiExternalLink, FiTarget
+  FiActivity,
+  FiCalendar,
+  FiExternalLink,
+  FiTarget,
 } from "react-icons/fi";
 
 interface IResultProps {
@@ -121,11 +122,15 @@ const Result: NextPage<IResultProps> & ISubtitleProps = ({ result }) => {
         <AppDate date={result.createdAt!} isTimeString={true} />
       </Flex>
       {/* Blog link */}
-      {result.isUnhealthy &&
-        getSuggestedBlog(
-          "Pet owners cant afford to skip these 9 vaccinations",
-          "/blogs/pet-owners-can-t-afford-to-skip-these-9-vaccinations"
-        )}
+      {result.model_type === "disease"
+        ? getSuggestedBlog(
+            "Plant disease remedies",
+            "/blogs/plant-disease-remedies"
+          )
+        : getSuggestedBlog(
+            "Weed control methods",
+            "/blogs/weed-control-methods"
+          )}
     </Box>
   );
 
