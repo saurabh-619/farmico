@@ -218,11 +218,15 @@ const Result: NextPage<IResultProps> & ISubtitleProps = ({ result }) => {
         </Flex>
       </Flex>
       {/* Blog link */}
-      {result.hasWeed &&
-        getSuggestedBlog(
-          "Pet owners cant afford to skip these 9 vaccinations",
-          "/blogs/pet-owners-can-t-afford-to-skip-these-9-vaccinations"
-        )}
+      {result.model_type === "disease"
+        ? getSuggestedBlog(
+            "Plant disease remedies",
+            "/blogs/plant-disease-remedies"
+          )
+        : getSuggestedBlog(
+            "Weed control methods",
+            "/blogs/weed-control-methods"
+          )}
     </Box>
   );
 
