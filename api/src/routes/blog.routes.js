@@ -18,7 +18,7 @@ const router = Router();
 router.route("/").get(getBlogs).post(authMiddleware, createABlog);
 router.route("/user").get(authMiddleware, getLoggedInUsersBlogs);
 router.route("/search").get(searchBlogs);
-router.route("/slug/:slug").get(getBlog);
+router.route("/slug/:id").get(getBlog);
 router
   .route("/:id")
   .put(authMiddleware, updateBlog)

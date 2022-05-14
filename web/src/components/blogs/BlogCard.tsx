@@ -18,7 +18,7 @@ const BlogCard: React.FC<IBlogCard> = ({ blog }) => {
   return (
     <NextLink
       href={{
-        pathname: `blogs/${blog.slug}`,
+        pathname: `blogs/${blog._id}`,
       }}
       prefetch={true}
     >

@@ -56,13 +56,13 @@ exports.getLoggedInUsersBlogs = async (req, res, next) => {
 };
 
 exports.getBlog = async (req, res, next) => {
-  const { slug } = req.params;
+  const { id } = req.params;
 
-  if (!slug) throw new createError.NotFound("Blog couldn't found.");
+  if (!id) throw new createError.NotFound("Blog couldn't found.");
 
   try {
     // const blog = await Blog.findById(id)
-    const blog = await Blog.findOne({ slug })
+    const blog = await Blog.findOne({ _id: id })
       .populate("author", "_id name username email profilePhoto isAdmin")
       .populate("likes.user", "_id name username email profilePhoto isAdmin")
       .populate(

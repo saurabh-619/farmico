@@ -50,8 +50,8 @@ export const getBlogs = (queryData?: IBlogQueries) => {
   );
 };
 
-export const getBlog = (slug?: string) => {
-  return axiosCommunity.get(`/blogs/slug/${slug}`);
+export const getBlog = (id?: string) => {
+  return axiosCommunity.get(`/blogs/slug/${id}`);
 };
 
 export const getUsersBlog = () => {

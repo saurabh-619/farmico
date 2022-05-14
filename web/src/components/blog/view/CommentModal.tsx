@@ -78,8 +78,9 @@ const CommentModal: React.FC<IAppCancelModalProps> = ({
             {t.cancel}
           </Button>
           <AppButton
-            text={t.delete}
+            text={t.add_comment}
             width="80px"
+            px={"60px"}
             onClick={() => {
               if (isTextInvalid()) return;
               onClose();

@@ -268,21 +268,21 @@ const Blog: NextPage<IBlogProps> & ISubtitleProps = ({ blogData }) => {
 
 Blog.subtitle = "Blog";
 
-const fetchBlog = async (slug: string) => {
-  const { data } = await handleRequest<string>(apiHelpers.getBlog, slug);
+const fetchBlog = async (id: string) => {
+  const { data } = await handleRequest<string>(apiHelpers.getBlog, id);
   return data;
 };
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { slug } = context.query;
+  const { id } = context.query;
 
-  if (!slug) {
+  if (!id) {
     return {
       notFound: true,
     };
   }
 
-  const data = await fetchBlog(slug as string);
+  const data = await fetchBlog(id as string);
 
   let blog = {};
 

@@ -54,7 +54,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
         alignItems="center"
         justifyContent="space-between"
       >
-        <NextLink passHref prefetch={true} href={`/blogs/${blog.slug}`}>
+        <NextLink passHref prefetch={true} href={`/blogs/${blog._id}`}>
           <Heading
             as="h3"
             fontWeight="medium"
@@ -69,7 +69,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
         </NextLink>
         {/* actions */}
         <Flex alignItems="center">
-          <NextLink passHref href={`/blogs/edit/${blog.slug}`}>
+          <NextLink passHref href={`/blogs/edit/${blog._id}`}>
             <Link>
               <AppActionIcon
                 icon={FiEdit}

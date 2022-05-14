@@ -40,9 +40,10 @@ export const useStore = create<StoreState>(
     setIsAuthenticated: (authState: boolean) => {
       set({ isAuthenticated: authState });
     },
-    setUser: (userData: any) => {
+    setUser: (userData: Partial<UserType>) => {
       const user = {
         _id: userData._id,
+        isAdmin: userData.isAdmin ?? false,
         name: userData.name,
         email: userData.email,
         username: userData.username,

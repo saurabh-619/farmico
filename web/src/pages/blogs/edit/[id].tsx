@@ -163,14 +163,14 @@ const UpdateBlog: NextPage<IUpdateBlogProps> & ISubtitleProps = ({
 UpdateBlog.subtitle = "Update blog";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const slug = context.params?.slug as string;
+  const id = context.params?.id as string;
 
-  if (!slug) {
+  if (!id) {
     return {
       notFound: true,
     };
   }
-  const { data } = await handleRequest(apiHelper.getBlog, slug);
+  const { data } = await handleRequest(apiHelper.getBlog, id);
 
   let currentBlog = {};
 

@@ -38,7 +38,7 @@ const Info = () => {
         <Heading as="h2" fontSize="2xl" fontWeight="semibold">
           {user?.name}
         </Heading>
-        <AppBadge text={t.admin} ml="3" />
+        {user?.isAdmin && <AppBadge text={t.admin} ml="3" />}
       </Flex>
       <Flex mt="6" w="70%" alignItems="center" justifyContent="space-between">
         <Box display="flex" alignItems="center" flexDirection="row" mx="2">

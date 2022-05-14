@@ -12,7 +12,7 @@ import React from "react";
 import { FiTrash2 } from "react-icons/fi";
 
 interface ICommentCardProps {
-  blogAuthorId:string,
+  blogAuthorId: string;
   comment: CommentType;
   deleteAComment: (commentId: string) => void;
 }
@@ -60,7 +60,7 @@ const CommentCard: React.FC<ICommentCardProps> = ({
             >
               {comment.user.name}
             </Heading>
-            {blogAuthorId === user?._id && (
+            {blogAuthorId === comment?.user._id && (
               <AppBadge text="author" bg="success.400" color="white" ml="3" />
             )}
           </Box>
@@ -84,7 +84,7 @@ const CommentCard: React.FC<ICommentCardProps> = ({
               isOpen={isOpen}
               onClose={onClose}
               onAccept={() => deleteAComment(comment._id)}
-              actionText={t.add_comment}
+              actionText={t.delete}
             />
           </Box>
         )}

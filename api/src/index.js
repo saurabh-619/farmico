@@ -55,7 +55,7 @@ app.get("/", (_, res) => {
   });
 });
 
-app.get("/team", authMiddleware, (_, res) => {
+app.get("/team", (_, res) => {
   return res.json([
     {
       name: "Saurabh Anand Bomble",
@@ -84,7 +84,6 @@ app.use(async (_, __, next) => {
 
 app.use((error, _, res, next) => {
   appLogger.error(error.message);
-
   res.status(error.status || 500).json({
     ok: false,
     status: error.status || 500,

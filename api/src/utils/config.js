@@ -1,6 +1,7 @@
 const compression = require("compression");
 const rateLimit = require("express-rate-limit");
 const swaggerJsdoc = require("swagger-jsdoc");
+const createErrors = require("http-errors");
 
 exports.compressionConfig = {
   threshold: 2 * 1000,
@@ -14,9 +15,15 @@ exports.compressionConfig = {
 exports.globalRateLimiter = rateLimit({
   windowMs: 15 * 1000 * 60,
   max: 50, // handle only 50 requests for every 15 min from an IP
-  message: "Too many requests, wait for some time",
   standardHeaders: true,
   legacyHeaders: false,
+  handler: (_, __, next) => {
+    next(
+      new Error(
+        "Too many requests from same IP. Wait for some time. जल लीजिए 🥛"
+      )
+    );
+  },
 });
 
 const swaggerOptions = {
