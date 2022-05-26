@@ -31,7 +31,7 @@ const User: NextPage<IUserProps> & ISubtitleProps = ({ user }) => {
         direction="column"
         justifyContent="center"
         alignItems="center"
-        w="60%"
+        w="65%"
         h="100%"
       >
         <Box pos="relative">

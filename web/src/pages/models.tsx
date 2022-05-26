@@ -12,7 +12,7 @@ import { ISubtitleProps } from "@/utils/types";
 import { Box, Flex, Heading } from "@chakra-ui/react";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Models: NextPage & ISubtitleProps = () => {
   const router = useRouter();
@@ -88,6 +88,19 @@ const Models: NextPage & ISubtitleProps = () => {
       setLoading(false);
     }
   };
+
+  const healthModelAPI = async () => {
+    const currentDateSeconds = new Date().getSeconds();
+    // console.log({ currentDateSeconds });
+    if (0 < currentDateSeconds && currentDateSeconds < 20) {
+      // console.log("Calling model api");
+      apiHelper.helloModels();
+    }
+  };
+
+  useEffect(() => {
+    healthModelAPI();
+  }, []);
 
   return (
     <Box pt="8" minH="75vh">
