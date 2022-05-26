@@ -8,7 +8,8 @@ WORKDIR /usr/src/api
 COPY package*.json .
 
 # RUN yarn install --immutable
-RUN npm ci
+# RUN npm ci
+RUN npm install
 
 COPY . .
 
