@@ -29,7 +29,7 @@ interface IResultProps {
 const Result: NextPage<IResultProps> & ISubtitleProps = ({ result }) => {
   const { t, locale } = useLocale();
 
-  const getSuggestedBlog = (title: string, url: string) => (
+  const getSuggestedBlogUI = (title: string, url: string) => (
     <Flex
       justifyContent="center"
       alignItems="center"
@@ -67,7 +67,7 @@ const Result: NextPage<IResultProps> & ISubtitleProps = ({ result }) => {
     </Flex>
   );
 
-  const getSuggestedBlogPayload = (model_type: ModelType, locale = "en") => {
+  const getSuggestedBlog = (model_type: ModelType, locale = "en") => {
     let title = "";
     let url = "";
 
@@ -97,7 +97,7 @@ const Result: NextPage<IResultProps> & ISubtitleProps = ({ result }) => {
       }
     }
 
-    return getSuggestedBlog(title, url);
+    return getSuggestedBlogUI(title, url);
   };
 
   const getDiseaseResultUI = (result: PostModelResult) => (
@@ -160,16 +160,7 @@ const Result: NextPage<IResultProps> & ISubtitleProps = ({ result }) => {
         <AppDate date={result.createdAt!} isTimeString={true} />
       </Flex>
       {/* Blog link */}
-      {getSuggestedBlogPayload(result.model_type, locale)}
-      {/* {result.model_type === "disease"
-        ? getSuggestedBlog(
-            "Plant disease remedies",
-            "/blogs/plant-disease-remedies"
-          )
-        : getSuggestedBlog(
-            "Weed control methods",
-            "/blogs/weed-control-methods"
-          )} */}
+      {getSuggestedBlog(result.model_type, locale)}
     </Box>
   );
 
@@ -257,16 +248,7 @@ const Result: NextPage<IResultProps> & ISubtitleProps = ({ result }) => {
         </Flex>
       </Flex>
       {/* Blog link */}
-      {getSuggestedBlogPayload(result.model_type, locale)}
-      {/* {result.model_type === "disease"
-        ? getSuggestedBlog(
-            "Plant disease remedies",
-            "/blogs/plant-disease-remedies"
-          )
-        : getSuggestedBlog(
-            "Weed control methods",
-            "/blogs/weed-control-methods"
-          )} */}
+      {getSuggestedBlog(result.model_type, locale)}
     </Box>
   );
 
