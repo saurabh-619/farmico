@@ -5,7 +5,12 @@ import useLocale from "@/hooks/useLocale";
 import AppHeading from "@/layout/AppHeading";
 import withAuth from "@/lib/withAuth";
 import * as appHelpers from "@/utils/helpers";
-import { ISubtitleProps, ModelEnum, PostModelResult } from "@/utils/types";
+import {
+  ISubtitleProps,
+  ModelEnum,
+  ModelType,
+  PostModelResult,
+} from "@/utils/types";
 import { Box, Flex, Heading, Icon, Link } from "@chakra-ui/react";
 import { GetServerSideProps, NextPage } from "next";
 import Image from "next/image";
@@ -61,6 +66,39 @@ const Result: NextPage<IResultProps> & ISubtitleProps = ({ result }) => {
       </NextLink>
     </Flex>
   );
+
+  const getSuggestedBlogPayload = (model_type: ModelType, locale = "en") => {
+    let title = "";
+    let url = "";
+
+    if (model_type === "disease") {
+      // disease
+      if (locale === "en") {
+        title = "Plant disease remedies";
+        url = "/blogs/626ae118547894c07bdffdc3";
+      } else if (locale === "mr") {
+        title = "वनस्पती रोग उपाय";
+        url = "/blogs/62911e0f015c7e00bc0f7228";
+      } else {
+        title = "पौधों की बीमारी के उपाय";
+        url = "/blogs/62912700015c7e00bc0f7245";
+      }
+    } else {
+      // Weed
+      if (locale === "en") {
+        title = "Weed control methods";
+        url = "/blogs/627794f5b6aed94e1705d1b3";
+      } else if (locale === "mr") {
+        title = "तण नियंत्रण पद्धती";
+        url = "/blogs/6280e4d0e2965390ba7d90b4";
+      } else {
+        title = "खरपतवार नियंत्रण के तरीके";
+        url = "/blogs/6280e539e2965390ba7d90ce";
+      }
+    }
+
+    return getSuggestedBlog(title, url);
+  };
 
   const getDiseaseResultUI = (result: PostModelResult) => (
     <Box display="flex" flexDir="column" alignItems="center">
@@ -122,7 +160,8 @@ const Result: NextPage<IResultProps> & ISubtitleProps = ({ result }) => {
         <AppDate date={result.createdAt!} isTimeString={true} />
       </Flex>
       {/* Blog link */}
-      {result.model_type === "disease"
+      {getSuggestedBlogPayload(result.model_type, locale)}
+      {/* {result.model_type === "disease"
         ? getSuggestedBlog(
             "Plant disease remedies",
             "/blogs/plant-disease-remedies"
@@ -130,7 +169,7 @@ const Result: NextPage<IResultProps> & ISubtitleProps = ({ result }) => {
         : getSuggestedBlog(
             "Weed control methods",
             "/blogs/weed-control-methods"
-          )}
+          )} */}
     </Box>
   );
 
@@ -218,7 +257,8 @@ const Result: NextPage<IResultProps> & ISubtitleProps = ({ result }) => {
         </Flex>
       </Flex>
       {/* Blog link */}
-      {result.model_type === "disease"
+      {getSuggestedBlogPayload(result.model_type, locale)}
+      {/* {result.model_type === "disease"
         ? getSuggestedBlog(
             "Plant disease remedies",
             "/blogs/plant-disease-remedies"
@@ -226,7 +266,7 @@ const Result: NextPage<IResultProps> & ISubtitleProps = ({ result }) => {
         : getSuggestedBlog(
             "Weed control methods",
             "/blogs/weed-control-methods"
-          )}
+          )} */}
     </Box>
   );
 
